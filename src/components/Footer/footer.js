@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { color, above } from "../../styles"
+import { color, above, gilroyMedium } from "../../styles"
 
 const Footer = () => {
   return (
@@ -79,6 +79,7 @@ const FooterSection = styled.div`
 `
 
 const FooterHeading = styled.h2`
+  ${gilroyMedium};
   font-size: 17px;
   color: ${color.black};
   margin-bottom: 12px;
@@ -86,6 +87,7 @@ const FooterHeading = styled.h2`
 
 const FooterLink = styled.a`
   text-decoration: none;
+  ${gilroyMedium};
   font-size: 14px;
   line-height: 28px;
   color: ${color.darkBlue};
