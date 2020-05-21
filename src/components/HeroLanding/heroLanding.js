@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import BackgroundImage from "../../images/image-homepage.png"
 import { gilroyBold, color, above } from "../../styles"
-import Arrow from "../../assets/icons/arrow.png"
+import Arrow from "../../assets/icons/arrow.svg"
 
 const HeroLanding = () => {
   return (
@@ -79,16 +79,17 @@ const HeroLink = styled.a`
   text-decoration: none;
   padding: 8px;
   color: ${color.white};
-  width: 156px;
+  width: 160px;
 
   ${above.desktop`
     font-size: 16px;
-    width: 200px;
+    width: 204px;
   `}
 `
 
 const HeroLinkImg = styled.img`
   vertical-align: middle;
+  margin-left: 4px;
 `
 
 export default HeroLanding
