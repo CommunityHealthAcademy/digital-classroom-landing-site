@@ -12,6 +12,7 @@ import {
 import LogoImage from "../../images/Red-Logo.svg"
 import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
+import Hero from "../Hero/hero"
 
 const Header = ({ path, heroImg }) => {
   const [isLandingPage, setIsLandingPage] = useState(false)
@@ -29,7 +30,7 @@ const Header = ({ path, heroImg }) => {
         <nav>
           <NavList>
             <NavListItem>
-              <NavLink href="">Our Mission</NavLink>
+              <NavLink to="/our-mission/">Our Mission</NavLink>
             </NavListItem>
             <NavListItem>
               <NavLink href="">Our members</NavLink>
@@ -102,6 +103,7 @@ const Header = ({ path, heroImg }) => {
           </BottomSection>
         </>
       )}
+      {!isLandingPage && <Hero heroImg={heroImg} />}
     </header>
   )
 }
@@ -144,7 +146,7 @@ const NavListItem = styled.li`
   margin-right: 60px;
 `
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   ${above.desktop`
     text-decoration: none;
     ${gilroyMedium}
@@ -243,7 +245,7 @@ const SectionLinkImg = styled.img`
 
 Header.propTypes = {
   path: PropTypes.string.isRequired,
-  heroImg: PropTypes.string.isRequired,
+  heroImg: PropTypes.object.isRequired,
 }
 
 export default Header

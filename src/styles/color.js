@@ -10,4 +10,5 @@ export const color = {
   pink: "#ee8cb7",
   darkBlue: "#164780",
   orange: "#ff4a2f",
+  grey: "#d1cece",
 }

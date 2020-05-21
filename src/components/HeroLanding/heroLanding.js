@@ -7,7 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 
 const HeroLanding = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query HeroLandingQuery {
       file(relativePath: { eq: "image-homepage.png" }) {
         id
         childImageSharp {
