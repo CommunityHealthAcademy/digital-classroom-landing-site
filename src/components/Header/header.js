@@ -69,6 +69,10 @@ const NavLink = styled.a`
     font-size: 14px;
     color: ${color.otherBlack};
   `}
+
+  &:hover {
+    color: ${color.orange};
+  }
 `
 
 export default Header

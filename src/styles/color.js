@@ -8,4 +8,5 @@ export const color = {
   blue: "#3d68ad",
   pink: "#ee8cb7",
   darkBlue: "#164780",
+  orange: "#ff4a2f",
 }
