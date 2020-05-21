@@ -159,6 +159,8 @@ const OurMissionSection = styled.section`
 
   ${above.desktop`
     margin-right: 14px;
+    position: relative;
+    height: 160px;
   `}
 `
 
@@ -168,6 +170,8 @@ const OurMembersSection = styled.section`
 
   ${above.desktop`
     margin-right: 14px;
+    position: relative;
+    height: 160px;
   `}
 `
 
@@ -177,6 +181,8 @@ const Covid19LibrarySection = styled.section`
 
   ${above.desktop`
     margin-right: 14px;
+    position: relative;
+    height: 160px;
   `}
 `
 
@@ -186,6 +192,8 @@ const CommunityHealthAcademySection = styled.section`
 
   ${above.desktop`
     margin-right: 14px;
+    position: relative;
+    height: 160px;
   `}
 `
 
@@ -207,6 +215,11 @@ const SectionText = styled.p`
 
 const SectionLink = styled.a``
 
-const SectionLinkImg = styled.img``
+const SectionLinkImg = styled.img`
+  ${above.desktop`
+    position: absolute;
+    bottom: 24px;
+  `}
+`
 
 export default Header
