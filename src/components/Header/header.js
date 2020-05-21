@@ -13,7 +13,7 @@ import LogoImage from "../../images/Red-Logo.svg"
 import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
 
-const Header = ({ path }) => {
+const Header = ({ path, heroImg }) => {
   const [isLandingPage, setIsLandingPage] = useState(false)
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Header = ({ path }) => {
       </TopSection>
       {isLandingPage && (
         <>
-          <HeroLanding />
+          <HeroLanding heroImg={heroImg} />
           <BottomSection>
             <OurMissionSection>
               <SectionHeading>Our Mission</SectionHeading>
@@ -243,6 +243,7 @@ const SectionLinkImg = styled.img`
 
 Header.propTypes = {
   path: PropTypes.string.isRequired,
+  heroImg: PropTypes.string.isRequired,
 }
 
 export default Header

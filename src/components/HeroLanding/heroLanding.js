@@ -1,12 +1,26 @@
 import React from "react"
+import { useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import BackgroundImage from "../../images/image-homepage.png"
 import { gilroyBold, color, above } from "../../styles"
 import Arrow from "../../assets/icons/arrow.svg"
+import BackgroundImage from "gatsby-background-image"
 
 const HeroLanding = () => {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      file(relativePath: { eq: "image-homepage.png" }) {
+        id
+        childImageSharp {
+          fluid(maxWidth: 1600, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <HeroLandingContainer>
+    <HeroLandingContainer tag="div" fluid={data.file.childImageSharp.fluid}>
       <HeroText>
         <Heading>
           <span>
@@ -22,8 +36,7 @@ const HeroLanding = () => {
   )
 }
 
-const HeroLandingContainer = styled.div`
-  background-image: url(${BackgroundImage});
+const HeroLandingContainer = styled(BackgroundImage)`
   background-size: cover;
   padding: 36px 28px 0 28px;
   height: 200px;
@@ -32,6 +45,10 @@ const HeroLandingContainer = styled.div`
     padding: 108px 140px 0 140px;
     height: 740px;
   `}
+
+  .hello {
+    height: 100px;
+  }
 `
 
 const HeroText = styled.div`
