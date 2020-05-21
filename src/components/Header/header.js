@@ -33,7 +33,7 @@ const Header = () => (
 
 const TopSection = styled.div`
   max-width: 1160px;
-  padding: 20.4px 28px 14.8px 28px;
+  padding: 20px 28px 14px 28px;
 
   ${above.desktop`
   display: flex;
@@ -46,7 +46,7 @@ const TopSection = styled.div`
 const Logo = styled.div`
   width: 150px;
   ${above.desktop`
-    margin-right: 108.5px;
+    margin-right: 108px;
   `}
 `
 
@@ -67,14 +67,14 @@ const NavList = styled.ul`
 `
 
 const NavListItem = styled.li`
-  margin-right: 59px;
+  margin-right: 60px;
 `
 
 const NavLink = styled.a`
   ${above.desktop`
     text-decoration: none;
     ${gilroyMedium}
-    font-size: 14px;
+    font-size: 16px;
     color: ${color.otherBlack};
   `}
 

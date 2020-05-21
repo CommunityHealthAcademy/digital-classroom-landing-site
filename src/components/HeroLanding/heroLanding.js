@@ -29,7 +29,7 @@ const HeroLandingContainer = styled.div`
   height: 200px;
 
   ${above.desktop`
-    padding: 108.5px 140px 0 140px;
+    padding: 108px 140px 0 140px;
     height: 740px;
   `}
 `
@@ -45,27 +45,31 @@ const HeroText = styled.div`
 `
 
 const Heading = styled.h1`
-  max-width: 263px;
+  max-width: 264px;
   ${gilroyBold}
-  font-size: 15.6px;
-  line-height: 2.5em;
-  letter-spacing: 0.25px;
+  font-size: 16px;
+  line-height: 2.4em;
+  letter-spacing: 0.24px;
   color: ${color.white};
   display: inline;
-  margin: 0 0 16.6px 16.6px;
+  margin: 0 0 16px 16x;
 
   ${above.desktop`
     font-size: 28px;
-    letter-spacing: 0.43px;
-    max-width: 643px;
+    letter-spacing: 0.44px;
+    max-width: 644px;
     line-height: 2.2em;
   `}
 
   span {
     background-color: ${color.red};
+    display: inline;
+    padding: 0.5rem;
     opacity: 0.9;
-    padding-left: 0px;
-    box-shadow: -8px 0 0 8px ${color.red}, 8px 0 0 8px ${color.red};
+
+    /* Needs prefixing */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 `
 
@@ -75,11 +79,11 @@ const HeroLink = styled.a`
   text-decoration: none;
   padding: 8px;
   color: ${color.white};
-  width: 155px;
+  width: 156px;
 
   ${above.desktop`
     font-size: 16px;
-    width: 199px;
+    width: 200px;
   `}
 `
 

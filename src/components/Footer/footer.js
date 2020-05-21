@@ -60,7 +60,7 @@ const FooterContainer = styled.footer`
     flex-direction: row;
     max-width: 1160px;
     margin: 0 auto;
-    padding: 53px 141px 89px 141px;
+    padding: 54px 140px 88px 140px;
   `}
 `
 
@@ -68,7 +68,7 @@ const FooterSection = styled.div`
   margin-bottom: 40px;
 
   ${above.desktop`
-    margin-right: 145px;
+    margin-right: 144px;
   `}
 
   &:last-of-type {
@@ -80,7 +80,7 @@ const FooterSection = styled.div`
 
 const FooterHeading = styled.h2`
   ${gilroyMedium};
-  font-size: 17px;
+  font-size: 16px;
   color: ${color.black};
   margin-bottom: 12px;
 `
