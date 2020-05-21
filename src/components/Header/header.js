@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import {
@@ -22,7 +23,7 @@ const Header = ({ path }) => {
   return (
     <header>
       <TopSection>
-        <Logo>
+        <Logo to="/">
           <Img src={LogoImage} alt="COVID-19 Digital Classroom logo" />
         </Logo>
         <nav>
@@ -117,15 +118,14 @@ const TopSection = styled.div`
 `}
 `
 
-const Logo = styled.div`
-  width: 150px;
+const Logo = styled(Link)`
   ${above.desktop`
     margin-right: 108px;
   `}
 `
 
 const Img = styled.img`
-  width: 100%;
+  width: 150px;
 `
 
 const NavList = styled.ul`
