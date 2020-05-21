@@ -22,10 +22,9 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-        <Footer />
-      </div>
+
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

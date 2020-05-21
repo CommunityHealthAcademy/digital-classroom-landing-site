@@ -2,39 +2,47 @@ import React from "react"
 import styled from "styled-components"
 import { color, above, gilroyMedium } from "../../styles"
 import LogoImage from "../../images/Red-Logo.svg"
+import HeroLanding from "../HeroLanding/heroLanding"
 
 const Header = () => (
-  <HeaderContainer>
-    <Logo>
-      <Img src={LogoImage} alt="COVID-19 Digital Classroom logo" />
-    </Logo>
-    <nav>
-      <NavList>
-        <NavListItem>
-          <NavLink href="">Our Mission</NavLink>
-        </NavListItem>
-        <NavListItem>
-          <NavLink href="">Our members</NavLink>
-        </NavListItem>
-        <NavListItem>
-          <NavLink href="">COVID-19 Library</NavLink>
-        </NavListItem>
-        <NavListItem>
-          <NavLink href="">Community Health Academy</NavLink>
-        </NavListItem>
-      </NavList>
-    </nav>
-  </HeaderContainer>
+  <header>
+    <TopSection>
+      <Logo>
+        <Img src={LogoImage} alt="COVID-19 Digital Classroom logo" />
+      </Logo>
+      <nav>
+        <NavList>
+          <NavListItem>
+            <NavLink href="">Our Mission</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href="">Our members</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href="">COVID-19 Library</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href="">Community Health Academy</NavLink>
+          </NavListItem>
+        </NavList>
+      </nav>
+    </TopSection>
+    <HeroLanding />
+  </header>
 )
 
-const HeaderContainer = styled.header`
+const TopSection = styled.div`
   max-width: 1160px;
   padding: 20.4px 28px 14.8px 28px;
+
+  ${above.desktop`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
+`}
 `
+
 const Logo = styled.div`
   width: 150px;
   ${above.desktop`
