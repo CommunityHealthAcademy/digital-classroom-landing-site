@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import {
   color,
@@ -11,80 +12,98 @@ import LogoImage from "../../images/Red-Logo.svg"
 import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
 
-const Header = () => (
-  <header>
-    <TopSection>
-      <Logo>
-        <Img src={LogoImage} alt="COVID-19 Digital Classroom logo" />
-      </Logo>
-      <nav>
-        <NavList>
-          <NavListItem>
-            <NavLink href="">Our Mission</NavLink>
-          </NavListItem>
-          <NavListItem>
-            <NavLink href="">Our members</NavLink>
-          </NavListItem>
-          <NavListItem>
-            <NavLink href="">COVID-19 Library</NavLink>
-          </NavListItem>
-          <NavListItem>
-            <NavLink href="">Community Health Academy</NavLink>
-          </NavListItem>
-        </NavList>
-      </nav>
-    </TopSection>
-    <HeroLanding />
-    <BottomSection>
-      <OurMissionSection>
-        <SectionHeading>Our Mission</SectionHeading>
-        <SectionText>
-          Dedicated to sharing medically reviewed content to help slow the
-          spread of COVID-19
-        </SectionText>
-        <SectionLink href="">
-          <SectionLinkImg src={Arrow} alt="Find out more about our mission" />
-        </SectionLink>
-      </OurMissionSection>
-      <OurMembersSection>
-        <SectionHeading>Our Members</SectionHeading>
-        <SectionText>
-          Dedicated to helping health workers access the training & information
-          they need to save lives.
-        </SectionText>
-        <SectionLink href="">
-          <SectionLinkImg src={Arrow} alt="Find out more about our members" />
-        </SectionLink>
-      </OurMembersSection>
-      <Covid19LibrarySection>
-        <SectionHeading>COVID-19 Library</SectionHeading>
-        <SectionText>
-          Multimedia content for empowering community-based health workers and
-          citizens across the globe.
-        </SectionText>
-        <SectionLink href="">
-          <SectionLinkImg
-            src={Arrow}
-            alt="Learn how you can use our COVID-19 Library"
-          />
-        </SectionLink>
-      </Covid19LibrarySection>
-      <CommunityHealthAcademySection>
-        <SectionHeading>Community Health Academy</SectionHeading>
-        <SectionText>
-          High-quality, interactive, open-source training courses for
-          community-based health workers
-        </SectionText>
-        <SectionLink href="">
-          <SectionLinkImg
-            src={Arrow}
-            alt="Learn more about our open-source training courses"
-          />
-        </SectionLink>
-      </CommunityHealthAcademySection>
-    </BottomSection>
-  </header>
-)
+const Header = ({ path }) => {
+  const [isLandingPage, setIsLandingPage] = useState(false)
+
+  useEffect(() => {
+    if (path === "/") setIsLandingPage(true)
+  }, [path])
+
+  return (
+    <header>
+      <TopSection>
+        <Logo>
+          <Img src={LogoImage} alt="COVID-19 Digital Classroom logo" />
+        </Logo>
+        <nav>
+          <NavList>
+            <NavListItem>
+              <NavLink href="">Our Mission</NavLink>
+            </NavListItem>
+            <NavListItem>
+              <NavLink href="">Our members</NavLink>
+            </NavListItem>
+            <NavListItem>
+              <NavLink href="">COVID-19 Library</NavLink>
+            </NavListItem>
+            <NavListItem>
+              <NavLink href="">Community Health Academy</NavLink>
+            </NavListItem>
+          </NavList>
+        </nav>
+      </TopSection>
+      {isLandingPage && (
+        <>
+          <HeroLanding />
+          <BottomSection>
+            <OurMissionSection>
+              <SectionHeading>Our Mission</SectionHeading>
+              <SectionText>
+                Dedicated to sharing medically reviewed content to help slow the
+                spread of COVID-19
+              </SectionText>
+              <SectionLink href="">
+                <SectionLinkImg
+                  src={Arrow}
+                  alt="Find out more about our mission"
+                />
+              </SectionLink>
+            </OurMissionSection>
+            <OurMembersSection>
+              <SectionHeading>Our Members</SectionHeading>
+              <SectionText>
+                Dedicated to helping health workers access the training &
+                information they need to save lives.
+              </SectionText>
+              <SectionLink href="">
+                <SectionLinkImg
+                  src={Arrow}
+                  alt="Find out more about our members"
+                />
+              </SectionLink>
+            </OurMembersSection>
+            <Covid19LibrarySection>
+              <SectionHeading>COVID-19 Library</SectionHeading>
+              <SectionText>
+                Multimedia content for empowering community-based health workers
+                and citizens across the globe.
+              </SectionText>
+              <SectionLink href="">
+                <SectionLinkImg
+                  src={Arrow}
+                  alt="Learn how you can use our COVID-19 Library"
+                />
+              </SectionLink>
+            </Covid19LibrarySection>
+            <CommunityHealthAcademySection>
+              <SectionHeading>Community Health Academy</SectionHeading>
+              <SectionText>
+                High-quality, interactive, open-source training courses for
+                community-based health workers
+              </SectionText>
+              <SectionLink href="">
+                <SectionLinkImg
+                  src={Arrow}
+                  alt="Learn more about our open-source training courses"
+                />
+              </SectionLink>
+            </CommunityHealthAcademySection>
+          </BottomSection>
+        </>
+      )}
+    </header>
+  )
+}
 
 const TopSection = styled.div`
   max-width: 1160px;
@@ -221,5 +240,9 @@ const SectionLinkImg = styled.img`
     bottom: 24px;
   `}
 `
+
+Header.propTypes = {
+  path: PropTypes.string.isRequired,
+}
 
 export default Header

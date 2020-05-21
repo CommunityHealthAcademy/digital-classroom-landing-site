@@ -7,7 +7,7 @@ import Footer from "../Footer/footer"
 import GlobalStyles from "../../styles/global"
 import "../../styles/css/fontface.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} path={path} />
 
       <main>{children}</main>
       <Footer />
@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default Layout
