@@ -8,6 +8,10 @@ const GlobalStyles = createGlobalStyle`
 	body {
 		${gilroyRegular}
 	}
+
+	main {
+		padding: 40px 0 0 0;
+	}
 `
 
 export default GlobalStyles

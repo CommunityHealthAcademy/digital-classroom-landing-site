@@ -18,11 +18,12 @@ const HeroContainer = styled(BackgroundImage)`
   background-size: cover;
   padding: 36px 28px 0 28px;
   height: 200px;
-  border-bottom: 8px solid ${color.teal};
+  border-bottom: 8px solid ${props => props.theme.heroBorderBottom};
+
   ${above.desktop`
-  padding: 108px 140px 0 140px;
-  height: 320px;
-`};
+    padding: 108px 140px 0 140px;
+    height: 320px;
+  `};
 `
 
 const Heading = styled.div`

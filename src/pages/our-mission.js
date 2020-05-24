@@ -23,11 +23,16 @@ const OurMissionPage = ({ path }) => {
 
   const theme = {
     bgColor: color.teal,
+    containerBorderTop: `1px solid ${color.grey}`,
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <Layout path={path} heroImg={data.file.childImageSharp.fluid}>
+      <Layout
+        path={path}
+        heroImg={data.file.childImageSharp.fluid}
+        theme={theme}
+      >
         <SEO title="Our Mission" />
         <Article>
           <ArticleHeading>The COVID-19 Digital Classroom</ArticleHeading>
@@ -61,7 +66,6 @@ const OurMissionPage = ({ path }) => {
             the last mile.
           </ArticleText>
         </Article>
-        <Divider></Divider>
       </Layout>
     </ThemeProvider>
   )
@@ -87,10 +91,6 @@ const ArticleText = styled.p`
   ${gilroyRegular};
   font-size: 18px;
   line-height: 30px;
-`
-
-const Divider = styled.div`
-  border-bottom: 1px solid ${color.grey};
 `
 
 OurMissionPage.propTypes = {

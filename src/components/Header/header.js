@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -14,13 +14,7 @@ import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
 import Hero from "../Hero/hero"
 
-const Header = ({ path, heroImg }) => {
-  const [isLandingPage, setIsLandingPage] = useState(false)
-
-  useEffect(() => {
-    if (path === "/") setIsLandingPage(true)
-  }, [path])
-
+const Header = ({ heroImg, isLandingPage }) => {
   return (
     <header>
       <TopSection>
@@ -33,7 +27,7 @@ const Header = ({ path, heroImg }) => {
               <NavLink to="/our-mission/">Our Mission</NavLink>
             </NavListItem>
             <NavListItem>
-              <NavLink href="">Our members</NavLink>
+              <NavLink to="/our-members/">Our members</NavLink>
             </NavListItem>
             <NavListItem>
               <NavLink href="">COVID-19 Library</NavLink>
@@ -244,7 +238,7 @@ const SectionLinkImg = styled.img`
 `
 
 Header.propTypes = {
-  path: PropTypes.string.isRequired,
+  isLandingPage: PropTypes.bool.isRequired,
   heroImg: PropTypes.object.isRequired,
 }
 
