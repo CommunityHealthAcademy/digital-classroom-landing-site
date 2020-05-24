@@ -20,7 +20,7 @@ export const gilroyRegular = css`
   font-weight: normal !important;
 `
 
-export const semiBoldItalic = css`
+export const gilroySemiBoldItalic = css`
   font-family: "Gilroy Semibold Italic", sans-serif;
   font-weight: normal !important;
 `

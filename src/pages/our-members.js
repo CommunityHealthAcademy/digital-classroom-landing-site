@@ -5,7 +5,13 @@ import styled from "styled-components"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
 import { ThemeProvider } from "styled-components"
-import { color, above, gilroyRegular, gilroySemiBold } from "../styles"
+import {
+  color,
+  above,
+  gilroyRegular,
+  gilroySemiBold,
+  gilroySemiBoldItalic,
+} from "../styles"
 import Img from "gatsby-image"
 
 const OurMembersPage = ({ path }) => {
@@ -91,10 +97,10 @@ const OurMembersPage = ({ path }) => {
         <MembersSection role="contentinfo" aria-label="Our Members">
           <SectionHeading>Our Members</SectionHeading>
           <MembersSectionText>
-            The COVID-19 Digital Classroom is a collective of international
-            organizations with expertise critical to slowing and stopping the
-            spread of COVID-19. With over 50 years’ experience between us,
-            including in epidemic response, community health systems
+            The <strong>COVID-19 Digital Classroom</strong> is a collective of
+            international organizations with expertise critical to slowing and
+            stopping the spread of COVID-19. With over 50 years’ experience
+            between us, including in epidemic response, community health systems
             strengthening, multimedia content development, online training, and
             language for effective risk communication, we are linking critical
             actors to help millions of health workers access the vital,
@@ -107,12 +113,14 @@ const OurMembersPage = ({ path }) => {
           <ContentContainer>
             <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
             <SectionText>
-              The Community Health Academy serves as the lead for the COVID-19
-              Digital Classroom. The Academy, housed at Last Mile Health, draws
-              on its partnerships with Ministers of Health in multiple countries
-              and leverages its experience developing online and
-              mobile-optimized training to inform how content is designed for
-              accessibility and usability.
+              <ItalicText href="">The Community Health Academy</ItalicText>{" "}
+              serves as the lead for the{" "}
+              <strong>COVID-19 Digital Classroom</strong>. The Academy, housed
+              at <ItalicText href="">Last Mile Health</ItalicText>, draws on its
+              partnerships with Ministers of Health in multiple countries and
+              leverages its experience developing online and mobile-optimized
+              training to inform how content is designed for accessibility and
+              usability.
             </SectionText>
           </ContentContainer>
         </Section>
@@ -121,13 +129,13 @@ const OurMembersPage = ({ path }) => {
           <ContentContainer>
             <MemberLogoTwo fluid={data.memberLogo2.childImageSharp.fluid} />
             <SectionText>
-              CORE Group draws on decades of convening experience, including in
-              response to earlier pandemics. CORE Group’s broad base of global
-              health practitioner experts serve as technical reviewers,
-              contributors, and content developers to focus on adaptations for
-              important populations affected, such as people with disabilities,
-              people living in urban informal settlements and pastoralist
-              communities.
+              <ItalicText href="">CORE Group</ItalicText> draws on decades of
+              convening experience, including in response to earlier pandemics.
+              CORE Group’s broad base of global health practitioner experts
+              serve as technical reviewers, contributors, and content developers
+              to focus on adaptations for important populations affected, such
+              as people with disabilities, people living in urban informal
+              settlements and pastoralist communities.
             </SectionText>
           </ContentContainer>
         </Section>
@@ -136,10 +144,10 @@ const OurMembersPage = ({ path }) => {
           <ContentContainer>
             <MemberLogoThree fluid={data.memberLogo3.childImageSharp.fluid} />
             <SectionText>
-              Medical Aid Films is leading development of multimedia content
-              (e.g., animation for messaging and training) to address issues of
-              poor or low levels of literacy in some of the most vulnerable
-              populations in the world.
+              <ItalicText href="">Medical Aid Films</ItalicText> is leading
+              development of multimedia content (e.g., animation for messaging
+              and training) to address issues of poor or low levels of literacy
+              in some of the most vulnerable populations in the world.
             </SectionText>
           </ContentContainer>
         </Section>
@@ -148,10 +156,11 @@ const OurMembersPage = ({ path }) => {
           <ContentContainer>
             <MemberLogoFour fluid={data.memberLogo4.childImageSharp.fluid} />
             <SectionText>
-              TechChange is leading the development of high-quality,
-              interactive online training and developing a series of short,
-              interactive, and engaging courses for community-based Health
-              Workers which are hosted on the Community Health Academy platform.
+              <ItalicText href="">TechChange</ItalicText> is leading the
+              development of high-quality, interactive online training and
+              developing a series of short, interactive, and engaging courses
+              for community-based Health Workers which are hosted on the
+              <ItalicText> Community Health Academy platform.</ItalicText>
             </SectionText>
           </ContentContainer>
         </Section>
@@ -160,10 +169,10 @@ const OurMembersPage = ({ path }) => {
           <ContentContainer>
             <MemberLogoFive fluid={data.memberLogo5.childImageSharp.fluid} />
             <SectionText>
-              Translators Without Borders are supporting translation of the
-              animations and training courses into a wide range of languages to
-              ensure they are accessible for community-based health workers
-              across multiple countries.
+              <ItalicText href="">Translators Without Borders</ItalicText> are
+              supporting translation of the animations and training courses into
+              a wide range of languages to ensure they are accessible for
+              community-based health workers across multiple countries.
             </SectionText>
           </ContentContainer>
         </Section>
@@ -297,6 +306,12 @@ const SectionDivider = styled.div`
   ${above.desktop`
     max-width: 920px;
   `}
+`
+
+const ItalicText = styled.a`
+  ${gilroySemiBoldItalic};
+  text-decoration: none;
+  color: ${color.darkBlue};
 `
 
 OurMembersPage.propTypes = {
