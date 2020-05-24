@@ -84,12 +84,13 @@ const OurMembersPage = ({ path }) => {
         heroImg={data.heroImg.childImageSharp.fluid}
         bgColor={color.green}
         heroBorderBottom={color.green}
+        heroText="Our Members"
         theme={theme}
       >
         <SEO title="Our Members" />
         <MembersSection role="contentinfo" aria-label="Our Members">
           <SectionHeading>Our Members</SectionHeading>
-          <SectionText>
+          <MembersSectionText>
             The COVID-19 Digital Classroom is a collective of international
             organizations with expertise critical to slowing and stopping the
             spread of COVID-19. With over 50 years’ experience between us,
@@ -98,7 +99,7 @@ const OurMembersPage = ({ path }) => {
             language for effective risk communication, we are linking critical
             actors to help millions of health workers access the vital,
             potentially life-saving information that they need.
-          </SectionText>
+          </MembersSectionText>
         </MembersSection>
         <Section role="contentinfo" aria-label="Who are our Members">
           <SectionHeading>Who</SectionHeading>
@@ -175,11 +176,22 @@ const OurMembersPage = ({ path }) => {
 const MembersSection = styled.section`
   max-width: 640px;
   margin: 0 auto;
-  padding: 0 24px 32px 24px;
+  padding: 40px 24px;
 
   ${above.desktop`
     max-width: 920px;
     padding: 100px 0 110px 0;
+  `}
+`
+
+const MembersSectionText = styled.p`
+  ${gilroyRegular};
+  font-size: 18px;
+  line-height: 30px;
+
+  ${above.desktop`
+    width: 640px;
+    flex: 1;
   `}
 `
 
@@ -198,6 +210,7 @@ const SectionHeading = styled.h2`
   ${gilroySemiBold};
   color: ${color.red};
   font-size: 24px;
+  margin-top: 0;
 `
 
 const ContentContainer = styled.div`
@@ -222,7 +235,7 @@ const SectionText = styled.p`
 
 const MemberLogoOne = styled(Img)`
   width: 128px;
-  margin-bottom: 28px;
+  margin-bottom: 6px;
 
   ${above.desktop`
     width: 220px;
@@ -232,7 +245,7 @@ const MemberLogoOne = styled(Img)`
 
 const MemberLogoTwo = styled(Img)`
   width: 187px;
-  margin-bottom: 28px;
+  margin-bottom: 6px;
 
   ${above.desktop`
   width: 220px;
@@ -242,7 +255,7 @@ const MemberLogoTwo = styled(Img)`
 
 const MemberLogoThree = styled(Img)`
   width: 187px;
-  margin-bottom: 28px;
+  margin-bottom: 6px;
 
   ${above.desktop`
   width: 220px;
@@ -252,7 +265,7 @@ const MemberLogoThree = styled(Img)`
 
 const MemberLogoFour = styled(Img)`
   width: 187px;
-  margin-bottom: 28px;
+  margin-bottom: 6px;
 
   ${above.desktop`
   width: 220px;
@@ -262,7 +275,7 @@ const MemberLogoFour = styled(Img)`
 
 const MemberLogoFive = styled(Img)`
   width: 187px;
-  margin-bottom: 28px;
+  margin-bottom: 6px;
 
   ${above.desktop`
   width: 220px;

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import normalize from "./normalize"
-import { gilroyRegular } from "../styles"
+import { gilroyRegular, gilroyBold } from "../styles"
 
 const GlobalStyles = createGlobalStyle`
 	${normalize}
@@ -9,8 +9,12 @@ const GlobalStyles = createGlobalStyle`
 		${gilroyRegular}
 	}
 
-	main {
-		padding: 40px 0 0 0;
+	strong {
+		${gilroyBold};
+	}
+
+	p {
+		margin: 24px 0;
 	}
 `
 

@@ -59,14 +59,13 @@ const Footer = ({ theme }) => {
 
 const FooterContainer = styled.footer`
   border-top: ${props => props.theme.containerBorderTop};
-  margin-top: ${props => (props.theme.containerBorderTop ? "100px" : "0")};
 
   ${above.desktop`
     margin: 0 auto;
   `};
 `
 
-const FooterSectionContainer = styled.footer`
+const FooterSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${color.white};

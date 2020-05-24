@@ -14,7 +14,7 @@ import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
 import Hero from "../Hero/hero"
 
-const Header = ({ heroImg, isLandingPage }) => {
+const Header = ({ heroImg, heroText, isLandingPage }) => {
   return (
     <header>
       <TopSection>
@@ -97,7 +97,7 @@ const Header = ({ heroImg, isLandingPage }) => {
           </BottomSection>
         </>
       )}
-      {!isLandingPage && <Hero heroImg={heroImg} />}
+      {!isLandingPage && <Hero heroImg={heroImg} heroText={heroText} />}
     </header>
   )
 }
@@ -240,6 +240,7 @@ const SectionLinkImg = styled.img`
 Header.propTypes = {
   isLandingPage: PropTypes.bool.isRequired,
   heroImg: PropTypes.object.isRequired,
+  heroText: PropTypes.string.isRequired,
 }
 
 export default Header

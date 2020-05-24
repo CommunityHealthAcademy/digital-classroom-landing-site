@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
-import { color } from "../styles"
 
 const IndexPage = ({ path }) => {
   const theme = {

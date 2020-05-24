@@ -4,11 +4,11 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import { above, color, gilroySemiBold } from "../../styles"
 
-const Hero = ({ heroImg }) => (
+const Hero = ({ heroImg, heroText }) => (
   <HeroContainer tag="div" fluid={heroImg}>
     <Heading>
       <HeroText>
-        <span>Our Mission</span>
+        <span>{heroText}</span>
       </HeroText>
     </Heading>
   </HeroContainer>
@@ -16,24 +16,21 @@ const Hero = ({ heroImg }) => (
 
 const HeroContainer = styled(BackgroundImage)`
   background-size: cover;
-  padding: 36px 28px 0 28px;
   height: 200px;
   border-bottom: 8px solid ${props => props.theme.heroBorderBottom};
 
   ${above.desktop`
-    padding: 108px 140px 0 140px;
     height: 320px;
   `};
 `
 
 const Heading = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  ${above.desktop`
   max-width: 640px;
   margin: 0 auto;
-`}
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const HeroText = styled.h1`
@@ -41,6 +38,7 @@ const HeroText = styled.h1`
   font-size: 30px;
   color: ${color.white};
   text-align: center;
+  margin: 0;
 
   span {
     background-color: ${props => props.theme.bgColor};
@@ -50,6 +48,7 @@ const HeroText = styled.h1`
 
 Hero.propTypes = {
   heroImg: PropTypes.object.isRequired,
+  heroText: PropTypes.string.isRequired,
 }
 
 export default Hero
