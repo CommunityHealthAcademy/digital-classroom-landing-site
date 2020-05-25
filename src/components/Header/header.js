@@ -7,11 +7,10 @@ import LogoImage from "../../images/Red-Logo.svg"
 import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
 import Hero from "../Hero/hero"
-import HamburgerMenu from "../HamburgerMenu/hamburgerMenu"
+import Menu from "../Menu/Menu"
 
 const Header = ({ heroImg, heroText, heroBorder, isLandingPage }) => {
   const [open, setOpen] = useState(false)
-
   return (
     <header>
       <TopSection>
@@ -19,29 +18,12 @@ const Header = ({ heroImg, heroText, heroBorder, isLandingPage }) => {
           <Img src={LogoImage} alt="COVID-19 Digital Classroom logo" />
         </Logo>
         <MenuContainer>
-          <HamburgerMenu open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
         </MenuContainer>
-
-        {/* <nav>
-          <NavList>
-            <NavListItem>
-              <NavLink to="/our-mission/">Our Mission</NavLink>
-            </NavListItem>
-            <NavListItem>
-              <NavLink to="/our-members/">Our members</NavLink>
-            </NavListItem>
-            <NavListItem>
-              <NavLink href="">COVID-19 Library</NavLink>
-            </NavListItem>
-            <NavListItem>
-              <NavLink href="">Community Health Academy</NavLink>
-            </NavListItem>
-          </NavList>
-        </nav> */}
       </TopSection>
       {isLandingPage && (
         <>
-          <HeroLanding heroImg={heroImg} />
+          <HeroLanding heroImg={heroImg} heroText={heroText} />
           <BottomSection>
             <OurMissionSection>
               <SectionHeading>Our Mission</SectionHeading>
@@ -118,9 +100,15 @@ const TopSection = styled.div`
 `
 
 const MenuContainer = styled.div`
+  height: 46px;
   flex: 1;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+
+  ${above.desktop`
+    justify-content: flex-start;
+  `}
 `
 
 const Logo = styled(Link)`
@@ -221,6 +209,7 @@ Header.propTypes = {
   isLandingPage: PropTypes.bool.isRequired,
   heroImg: PropTypes.object.isRequired,
   heroText: PropTypes.string.isRequired,
+  heroBorder: PropTypes.string.isRequired,
 }
 
 export default Header

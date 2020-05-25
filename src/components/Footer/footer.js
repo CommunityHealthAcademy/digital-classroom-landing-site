@@ -111,7 +111,7 @@ const FooterList = styled.ul`
 `
 
 Footer.propTypes = {
-  theme: PropTypes.object.isRequired,
+  footerBorder: PropTypes.string.isRequired,
 }
 
 export default Footer

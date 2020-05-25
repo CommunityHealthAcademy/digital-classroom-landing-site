@@ -1,32 +1,16 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import { gilroyBold, color, above } from "../../styles"
 import Arrow from "../../assets/icons/arrow.svg"
 import BackgroundImage from "gatsby-background-image"
 
-const HeroLanding = () => {
-  const data = useStaticQuery(graphql`
-    query HeroLandingQuery {
-      file(relativePath: { eq: "image-homepage.png" }) {
-        id
-        childImageSharp {
-          fluid(maxWidth: 1600, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
-    }
-  `)
-
+const HeroLanding = ({ heroImg, heroText }) => {
   return (
-    <HeroLandingContainer tag="div" fluid={data.file.childImageSharp.fluid}>
+    <HeroLandingContainer tag="div" fluid={heroImg}>
       <HeroText>
         <Heading>
-          <span>
-            Quality assured COVID-19 library of resources for community-based
-            healthworkers
-          </span>
+          <span>{heroText}</span>
         </Heading>
         <HeroLink href="#">
           Go to COVID-19 Library <HeroLinkImg src={Arrow} alt="" />
@@ -108,5 +92,10 @@ const HeroLinkImg = styled.img`
   vertical-align: middle;
   margin-left: 4px;
 `
+
+HeroLanding.propTypes = {
+  heroImg: PropTypes.object.isRequired,
+  heroText: PropTypes.string.isRequired,
+}
 
 export default HeroLanding
