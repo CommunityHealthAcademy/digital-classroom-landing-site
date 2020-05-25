@@ -7,7 +7,7 @@ import LogoImage from "../../images/Red-Logo.svg"
 import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
 import Hero from "../Hero/hero"
-import Menu from "../Menu/Menu"
+import Menu from "../Menu/menu"
 
 const Header = ({ heroImg, heroText, heroBorder, isLandingPage }) => {
   const [open, setOpen] = useState(false)
