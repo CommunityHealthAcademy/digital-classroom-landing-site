@@ -9,7 +9,7 @@ import Arrow from "../../assets/icons/arrow.svg"
 import Hero from "../Hero/hero"
 import HamburgerMenu from "../HamburgerMenu/hamburgerMenu"
 
-const Header = ({ heroImg, heroText, isLandingPage }) => {
+const Header = ({ heroImg, heroText, heroBorder, isLandingPage }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -98,7 +98,9 @@ const Header = ({ heroImg, heroText, isLandingPage }) => {
           </BottomSection>
         </>
       )}
-      {!isLandingPage && <Hero heroImg={heroImg} heroText={heroText} />}
+      {!isLandingPage && (
+        <Hero heroImg={heroImg} heroText={heroText} heroBorder={heroBorder} />
+      )}
     </header>
   )
 }

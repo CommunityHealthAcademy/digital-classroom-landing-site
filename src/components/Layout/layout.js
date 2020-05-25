@@ -6,6 +6,7 @@ import Header from "../Header/header"
 import Footer from "../Footer/footer"
 import GlobalStyles from "../../styles/global"
 import "../../styles/css/fontface.css"
+import { ThemeProvider } from "styled-components"
 
 const Layout = ({ children, path, heroImg, theme, heroText }) => {
   const data = useStaticQuery(graphql`
@@ -25,19 +26,21 @@ const Layout = ({ children, path, heroImg, theme, heroText }) => {
   }, [path])
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header
         siteTitle={data.site.siteMetadata.title}
         path={path}
         heroImg={heroImg}
         heroText={heroText}
+        heroTextBackground={theme.heroTextBackground}
+        heroBorder={theme.heroBorder}
         isLandingPage={isLandingPage}
       />
 
       <main>{children}</main>
-      <Footer theme={theme} isLandingPage={isLandingPage} />
-    </>
+      <Footer footerBorder={theme.heroBorder} isLandingPage={isLandingPage} />
+    </ThemeProvider>
   )
 }
 

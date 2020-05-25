@@ -4,7 +4,6 @@ import { useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
-import { ThemeProvider } from "styled-components"
 import {
   color,
   above,
@@ -78,107 +77,102 @@ const OurMembersPage = ({ path }) => {
   `)
 
   const theme = {
-    bgColor: color.green,
-    heroBorderBottom: color.green,
-    containerBorderTop: `1px solid ${color.grey}`,
+    heroBorder: `8px solid ${color.green}`,
+    heroTextBackground: `${color.green}`,
+    footerBorder: `1px solid ${color.grey}`,
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <Layout
-        path={path}
-        heroImg={data.heroImg.childImageSharp.fluid}
-        bgColor={color.green}
-        heroBorderBottom={color.green}
-        heroText="Our Members"
-        theme={theme}
-      >
-        <SEO title="Our Members" />
-        <MembersSection role="contentinfo" aria-label="Our Members">
-          <SectionHeading>Our Members</SectionHeading>
-          <MembersSectionText>
-            The <strong>COVID-19 Digital Classroom</strong> is a collective of
-            international organizations with expertise critical to slowing and
-            stopping the spread of COVID-19. With over 50 years’ experience
-            between us, including in epidemic response, community health systems
-            strengthening, multimedia content development, online training, and
-            language for effective risk communication, we are linking critical
-            actors to help millions of health workers access the vital,
-            potentially life-saving information that they need.
-          </MembersSectionText>
-        </MembersSection>
-        <Section role="contentinfo" aria-label="Who are our Members">
-          <SectionHeading>Who</SectionHeading>
-          <HeadingDivider></HeadingDivider>
-          <ContentContainer>
-            <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
-            <SectionText>
-              <ItalicText href="">The Community Health Academy</ItalicText>{" "}
-              serves as the lead for the{" "}
-              <strong>COVID-19 Digital Classroom</strong>. The Academy, housed
-              at <ItalicText href="">Last Mile Health</ItalicText>, draws on its
-              partnerships with Ministers of Health in multiple countries and
-              leverages its experience developing online and mobile-optimized
-              training to inform how content is designed for accessibility and
-              usability.
-            </SectionText>
-          </ContentContainer>
-        </Section>
-        <SectionDivider></SectionDivider>
-        <Section role="contentinfo" aria-label="Core Group">
-          <ContentContainer>
-            <MemberLogoTwo fluid={data.memberLogo2.childImageSharp.fluid} />
-            <SectionText>
-              <ItalicText href="">CORE Group</ItalicText> draws on decades of
-              convening experience, including in response to earlier pandemics.
-              CORE Group’s broad base of global health practitioner experts
-              serve as technical reviewers, contributors, and content developers
-              to focus on adaptations for important populations affected, such
-              as people with disabilities, people living in urban informal
-              settlements and pastoralist communities.
-            </SectionText>
-          </ContentContainer>
-        </Section>
-        <SectionDivider></SectionDivider>
-        <Section role="contentinfo" aria-label="Medical Aid Films">
-          <ContentContainer>
-            <MemberLogoThree fluid={data.memberLogo3.childImageSharp.fluid} />
-            <SectionText>
-              <ItalicText href="">Medical Aid Films</ItalicText> is leading
-              development of multimedia content (e.g., animation for messaging
-              and training) to address issues of poor or low levels of literacy
-              in some of the most vulnerable populations in the world.
-            </SectionText>
-          </ContentContainer>
-        </Section>
-        <SectionDivider></SectionDivider>
-        <Section role="contentinfo" aria-label="Tech Change">
-          <ContentContainer>
-            <MemberLogoFour fluid={data.memberLogo4.childImageSharp.fluid} />
-            <SectionText>
-              <ItalicText href="">TechChange</ItalicText> is leading the
-              development of high-quality, interactive online training and
-              developing a series of short, interactive, and engaging courses
-              for community-based Health Workers which are hosted on the
-              <ItalicText> Community Health Academy platform.</ItalicText>
-            </SectionText>
-          </ContentContainer>
-        </Section>
-        <SectionDivider></SectionDivider>
-        <Section role="contentinfo" aria-label="Translators Without Borders">
-          <ContentContainer>
-            <MemberLogoFive fluid={data.memberLogo5.childImageSharp.fluid} />
-            <SectionText>
-              <ItalicText href="">Translators Without Borders</ItalicText> are
-              supporting translation of the animations and training courses into
-              a wide range of languages to ensure they are accessible for
-              community-based health workers across multiple countries.
-            </SectionText>
-          </ContentContainer>
-        </Section>
-        <SectionDivider></SectionDivider>
-      </Layout>
-    </ThemeProvider>
+    <Layout
+      path={path}
+      heroImg={data.heroImg.childImageSharp.fluid}
+      heroText="Our Members"
+      theme={theme}
+    >
+      <SEO title="Our Members" />
+      <MembersSection role="contentinfo" aria-label="Our Members">
+        <SectionHeading>Our Members</SectionHeading>
+        <MembersSectionText>
+          The <strong>COVID-19 Digital Classroom</strong> is a collective of
+          international organizations with expertise critical to slowing and
+          stopping the spread of COVID-19. With over 50 years’ experience
+          between us, including in epidemic response, community health systems
+          strengthening, multimedia content development, online training, and
+          language for effective risk communication, we are linking critical
+          actors to help millions of health workers access the vital,
+          potentially life-saving information that they need.
+        </MembersSectionText>
+      </MembersSection>
+      <Section role="contentinfo" aria-label="Who are our Members">
+        <SectionHeading>Who</SectionHeading>
+        <HeadingDivider></HeadingDivider>
+        <ContentContainer>
+          <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
+          <SectionText>
+            <ItalicText href="">The Community Health Academy</ItalicText> serves
+            as the lead for the <strong>COVID-19 Digital Classroom</strong>. The
+            Academy, housed at <ItalicText href="">Last Mile Health</ItalicText>
+            , draws on its partnerships with Ministers of Health in multiple
+            countries and leverages its experience developing online and
+            mobile-optimized training to inform how content is designed for
+            accessibility and usability.
+          </SectionText>
+        </ContentContainer>
+      </Section>
+      <SectionDivider></SectionDivider>
+      <Section role="contentinfo" aria-label="Core Group">
+        <ContentContainer>
+          <MemberLogoTwo fluid={data.memberLogo2.childImageSharp.fluid} />
+          <SectionText>
+            <ItalicText href="">CORE Group</ItalicText> draws on decades of
+            convening experience, including in response to earlier pandemics.
+            CORE Group’s broad base of global health practitioner experts serve
+            as technical reviewers, contributors, and content developers to
+            focus on adaptations for important populations affected, such as
+            people with disabilities, people living in urban informal
+            settlements and pastoralist communities.
+          </SectionText>
+        </ContentContainer>
+      </Section>
+      <SectionDivider></SectionDivider>
+      <Section role="contentinfo" aria-label="Medical Aid Films">
+        <ContentContainer>
+          <MemberLogoThree fluid={data.memberLogo3.childImageSharp.fluid} />
+          <SectionText>
+            <ItalicText href="">Medical Aid Films</ItalicText> is leading
+            development of multimedia content (e.g., animation for messaging and
+            training) to address issues of poor or low levels of literacy in
+            some of the most vulnerable populations in the world.
+          </SectionText>
+        </ContentContainer>
+      </Section>
+      <SectionDivider></SectionDivider>
+      <Section role="contentinfo" aria-label="Tech Change">
+        <ContentContainer>
+          <MemberLogoFour fluid={data.memberLogo4.childImageSharp.fluid} />
+          <SectionText>
+            <ItalicText href="">TechChange</ItalicText> is leading the
+            development of high-quality, interactive online training and
+            developing a series of short, interactive, and engaging courses for
+            community-based Health Workers which are hosted on the
+            <ItalicText> Community Health Academy platform.</ItalicText>
+          </SectionText>
+        </ContentContainer>
+      </Section>
+      <SectionDivider></SectionDivider>
+      <Section role="contentinfo" aria-label="Translators Without Borders">
+        <ContentContainer>
+          <MemberLogoFive fluid={data.memberLogo5.childImageSharp.fluid} />
+          <SectionText>
+            <ItalicText href="">Translators Without Borders</ItalicText> are
+            supporting translation of the animations and training courses into a
+            wide range of languages to ensure they are accessible for
+            community-based health workers across multiple countries.
+          </SectionText>
+        </ContentContainer>
+      </Section>
+      <SectionDivider></SectionDivider>
+    </Layout>
   )
 }
 

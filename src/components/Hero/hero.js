@@ -17,7 +17,7 @@ const Hero = ({ heroImg, heroText }) => (
 const HeroContainer = styled(BackgroundImage)`
   background-size: cover;
   height: 200px;
-  border-bottom: 8px solid ${props => props.theme.heroBorderBottom};
+  border-bottom: ${props => props.theme.heroBorder};
 
   ${above.desktop`
     height: 320px;
@@ -41,7 +41,7 @@ const HeroText = styled.h1`
   margin: 0;
 
   span {
-    background-color: ${props => props.theme.bgColor};
+    background-color: ${props => props.theme.heroTextBackground};
     padding: 4px 12px;
   }
 `

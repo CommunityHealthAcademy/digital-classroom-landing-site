@@ -4,6 +4,7 @@ export const color = {
   otherBlack: "#141414",
   differentBlack: "#161616",
   white: "#ffffff",
+  lightTeal: "#85bbb8",
   teal: "#84b9b6",
   green: "#9fc65b",
   blue: "#3d68ad",
