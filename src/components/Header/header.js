@@ -1,27 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import {
-  color,
-  above,
-  gilroyMedium,
-  gilroyBold,
-  gilroySemiBold,
-} from "../../styles"
+import { color, above, gilroyBold, gilroySemiBold } from "../../styles"
 import LogoImage from "../../images/Red-Logo.svg"
 import HeroLanding from "../HeroLanding/heroLanding"
 import Arrow from "../../assets/icons/arrow.svg"
 import Hero from "../Hero/hero"
+import HamburgerMenu from "../HamburgerMenu/hamburgerMenu"
 
 const Header = ({ heroImg, heroText, isLandingPage }) => {
+  const [open, setOpen] = useState(false)
+
   return (
     <header>
       <TopSection>
         <Logo to="/">
           <Img src={LogoImage} alt="COVID-19 Digital Classroom logo" />
         </Logo>
-        <nav>
+        <MenuContainer>
+          <HamburgerMenu open={open} setOpen={setOpen} />
+        </MenuContainer>
+
+        {/* <nav>
           <NavList>
             <NavListItem>
               <NavLink to="/our-mission/">Our Mission</NavLink>
@@ -36,7 +37,7 @@ const Header = ({ heroImg, heroText, isLandingPage }) => {
               <NavLink href="">Community Health Academy</NavLink>
             </NavListItem>
           </NavList>
-        </nav>
+        </nav> */}
       </TopSection>
       {isLandingPage && (
         <>
@@ -105,13 +106,19 @@ const Header = ({ heroImg, heroText, isLandingPage }) => {
 const TopSection = styled.div`
   max-width: 1160px;
   padding: 20px 28px 14px 28px;
+  display: flex;
+  align-items: center;
 
   ${above.desktop`
-  display: flex;
   flex-direction: row;
-  align-items: center;
   margin: 0 auto;
 `}
+`
+
+const MenuContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 `
 
 const Logo = styled(Link)`
@@ -122,35 +129,6 @@ const Logo = styled(Link)`
 
 const Img = styled.img`
   width: 150px;
-`
-
-const NavList = styled.ul`
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  display: none;
-
-  ${above.desktop`
-    display: flex;
-    flex-direction: row;
-  `}
-`
-
-const NavListItem = styled.li`
-  margin-right: 60px;
-`
-
-const NavLink = styled(Link)`
-  ${above.desktop`
-    text-decoration: none;
-    ${gilroyMedium}
-    font-size: 16px;
-    color: ${color.otherBlack};
-  `}
-
-  &:hover {
-    color: ${color.orange};
-  }
 `
 
 const BottomSection = styled.article`
