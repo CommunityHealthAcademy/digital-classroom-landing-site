@@ -36,7 +36,9 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
             <GatsbyLink to="/our-members/">Our Members</GatsbyLink>
           </MenuListItem>
           <MenuListItem>
-            <MenuLink href="/our-mission/">COVID-19 Library</MenuLink>
+            <MenuLink href="https://covid-19library.org/">
+              COVID-19 Library
+            </MenuLink>
           </MenuListItem>
           <MenuListItem>
             <MenuLink href="https://lastmilehealth.org/what-we-do/community-health-academy/">
