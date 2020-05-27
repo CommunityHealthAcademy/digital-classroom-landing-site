@@ -107,7 +107,7 @@ const OurMissionCard = styled(Link)`
   `}
 
   &:hover {
-    filter: brightness(108%);
+    filter: brightness(90%);
   }
 `
 
@@ -124,7 +124,7 @@ const OurMembersCard = styled(Link)`
   `}
 
   &:hover {
-    filter: brightness(108%);
+    filter: brightness(90%);
   }
 `
 
@@ -141,7 +141,7 @@ const Covid19LibraryCard = styled(Link)`
   `}
 
   &:hover {
-    filter: brightness(108%);
+    filter: brightness(90%);
   }
 `
 
@@ -158,7 +158,7 @@ const CommunityHealthAcademyCard = styled(Link)`
   `}
 
   &:hover {
-    filter: brightness(108%);
+    filter: brightness(90%);
   }
 `
 

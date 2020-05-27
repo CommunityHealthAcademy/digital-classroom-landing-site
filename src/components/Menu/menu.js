@@ -100,7 +100,7 @@ const Navigation = styled.nav`
   width: 215px;
   position: absolute;
   z-index: 1;
-  top: 74px;
+  top: 79px;
   right: ${props => (props.menuOpen ? "0" : "-215px")};
   background-color: ${props =>
     props.menuOpen ? `${color.midGrey}` : `${color.white}`};

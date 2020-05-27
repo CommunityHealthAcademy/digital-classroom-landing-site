@@ -36,7 +36,7 @@ const Logo = styled(Link)`
 `
 
 const Img = styled.img`
-  width: 150px;
+  width: 170px;
 `
 
 export default Header
