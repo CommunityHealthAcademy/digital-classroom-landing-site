@@ -1,18 +1,22 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { color, above, gilroyMedium } from "../../styles"
 
 const Menu = ({ menuOpen, setMenuOpen }) => {
-  let resizeTimer
-  window.addEventListener("resize", () => {
-    document.body.classList.add("resize-animation-stopper")
-    clearTimeout(resizeTimer)
-    resizeTimer = setTimeout(() => {
-      document.body.classList.remove("resize-animation-stopper")
-    }, 400)
-  })
+  useEffect(() => {
+    let resizeTimer
+
+    window.addEventListener("resize", () => {
+      document.body.classList.add("resize-animation-stopper")
+      clearTimeout(resizeTimer)
+      resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper")
+      }, 400)
+    })
+  }, [])
+
   return (
     <MenuContainer>
       <HamburgerButton
