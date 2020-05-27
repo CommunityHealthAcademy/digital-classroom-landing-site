@@ -40,7 +40,7 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
 
             <SectionLinkImg src={Arrow} alt="Find out more about our members" />
           </OurMembersCard>
-          <Covid19LibraryCard>
+          <Covid19LibraryCard href="https://covid-19library.org/">
             <SectionHeading>
               <span>COVID-19 Library</span>
             </SectionHeading>
@@ -54,7 +54,7 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
               alt="Learn how you can use our COVID-19 Library"
             />
           </Covid19LibraryCard>
-          <CommunityHealthAcademyCard>
+          <CommunityHealthAcademyCard href="https://communityhealthacademy.course.tc">
             <CommunityHeading>
               <span>Community Health Academy</span>
             </CommunityHeading>
@@ -128,7 +128,7 @@ const OurMembersCard = styled(Link)`
   }
 `
 
-const Covid19LibraryCard = styled(Link)`
+const Covid19LibraryCard = styled.a`
   background-color: ${color.blue};
   padding: 24px 28px;
   text-decoration: none;
@@ -145,7 +145,7 @@ const Covid19LibraryCard = styled(Link)`
   }
 `
 
-const CommunityHealthAcademyCard = styled(Link)`
+const CommunityHealthAcademyCard = styled.a`
   background-color: ${color.pink};
   padding: 24px 28px;
   text-decoration: none;

@@ -113,11 +113,13 @@ const OurMembersPage = ({ path }) => {
           potentially life-saving information that they need.
         </MembersSectionText>
       </MembersSection>
-      <Section role="contentinfo" aria-label="Who are our Members">
+      <Section role="contentinfo" aria-label="Last Mile Health">
         <SectionHeading>Who</SectionHeading>
         <HeadingDivider></HeadingDivider>
         <ContentContainer>
-          <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
+          <a href="https://lastmilehealth.org">
+            <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
+          </a>
           <SectionText>
             <ItalicText href="">The Community Health Academy</ItalicText> serves
             as the lead for the <strong>COVID-19 Digital Classroom</strong>. The
@@ -132,7 +134,9 @@ const OurMembersPage = ({ path }) => {
       <SectionDivider></SectionDivider>
       <Section role="contentinfo" aria-label="Core Group">
         <ContentContainer>
-          <MemberLogoTwo fluid={data.memberLogo2.childImageSharp.fluid} />
+          <a href="https://coregroup.org">
+            <MemberLogoTwo fluid={data.memberLogo2.childImageSharp.fluid} />
+          </a>
           <SectionText>
             <ItalicText href="">CORE Group</ItalicText> draws on decades of
             convening experience, including in response to earlier pandemics.
@@ -147,7 +151,9 @@ const OurMembersPage = ({ path }) => {
       <SectionDivider></SectionDivider>
       <Section role="contentinfo" aria-label="Medical Aid Films">
         <ContentContainer>
-          <MemberLogoThree fluid={data.memberLogo3.childImageSharp.fluid} />
+          <a href="https://www.medicalaidfilms.org">
+            <MemberLogoThree fluid={data.memberLogo3.childImageSharp.fluid} />
+          </a>
           <SectionText>
             <ItalicText href="">Medical Aid Films</ItalicText> is leading
             development of multimedia content (e.g., animation for messaging and
@@ -159,7 +165,9 @@ const OurMembersPage = ({ path }) => {
       <SectionDivider></SectionDivider>
       <Section role="contentinfo" aria-label="Tech Change">
         <ContentContainer>
-          <MemberLogoFour fluid={data.memberLogo4.childImageSharp.fluid} />
+          <a href="https://www.techchange.org">
+            <MemberLogoFour fluid={data.memberLogo4.childImageSharp.fluid} />
+          </a>
           <SectionText>
             <ItalicText href="">TechChange</ItalicText> is leading the
             development of high-quality, interactive online training and
@@ -172,7 +180,9 @@ const OurMembersPage = ({ path }) => {
       <SectionDivider></SectionDivider>
       <Section role="contentinfo" aria-label="Translators Without Borders">
         <ContentContainer>
-          <MemberLogoFive fluid={data.memberLogo5.childImageSharp.fluid} />
+          <a href="https://translatorswithoutborders.org">
+            <MemberLogoFive fluid={data.memberLogo5.childImageSharp.fluid} />
+          </a>
           <SectionText>
             <ItalicText href="">Translators Without Borders</ItalicText> are
             supporting translation of the animations and training courses into a
@@ -192,7 +202,6 @@ const MembersSection = styled.section`
   padding: 40px 24px;
 
   ${above.desktop`
-    max-width: 920px;
     padding: 100px 0 110px 0;
   `}
 `
