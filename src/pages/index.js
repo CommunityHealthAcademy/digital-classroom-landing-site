@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
+import { color, gilroyBold } from "../styles"
 
 const IndexPage = ({ path }) => {
   const data = useStaticQuery(graphql`
@@ -19,8 +20,20 @@ const IndexPage = ({ path }) => {
   `)
 
   const theme = {
-    containerBorderTop: "none",
+    footerBorder: "none",
     heroBorder: "none",
+    heroHeight: "740px",
+    heroTextFontFamily: `${gilroyBold}`,
+    heroTextPosition: "relative",
+    heroTextPositionTop: "40px",
+    heroTextPositionLeft: "32px",
+    heroTextPositionTopDesk: "108px",
+    heroTextPositionLeftDesk: "140px",
+    heroTextMaxWidth: "1440px",
+    heroTextBg: color.red,
+    heroTextSize: "15.8px",
+    heroTextLetterSpaceMob: "0.24px",
+    heroTextLetterSpaceDesk: "0.44px",
   }
 
   return (
@@ -30,6 +43,7 @@ const IndexPage = ({ path }) => {
       heroText="Quality assured COVID-19 library of resources for community-based
       healthworkers"
       theme={theme}
+      landingPage
     >
       <SEO title="Home" />
     </Layout>

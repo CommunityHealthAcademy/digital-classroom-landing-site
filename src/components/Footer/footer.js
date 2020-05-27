@@ -69,7 +69,7 @@ const FooterSectionContainer = styled.div`
 
   ${above.desktop`
     flex-direction: row;
-    max-width: 1160px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 54px 140px 88px 140px;
   `};

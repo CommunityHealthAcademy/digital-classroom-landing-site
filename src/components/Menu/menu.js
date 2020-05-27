@@ -1,147 +1,156 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import { color, above, gilroyMedium } from "../../styles"
 
-const Menu = ({ open, setOpen }) => {
+const Menu = ({ menuOpen, setMenuOpen }) => {
+  let resizeTimer
+  window.addEventListener("resize", () => {
+    document.body.classList.add("resize-animation-stopper")
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(() => {
+      document.body.classList.remove("resize-animation-stopper")
+    }, 400)
+  })
   return (
-    <>
-      <MenuButton type="button" onClick={() => setOpen(!open)} open={open}>
-        <div />
-        <div />
-        <div />
-      </MenuButton>
-      <MenuNav>
-        <MenuNavList open={open}>
-          <MenuNavListItem>
-            <GatsbyLink to="/our-mission">Our Mission</GatsbyLink>
-          </MenuNavListItem>
-          <MenuNavListItem>
-            <GatsbyLink to="/our-members">Our Members</GatsbyLink>
-          </MenuNavListItem>
-          <MenuNavListItem>
-            <ExternalLink href="https://covid-19library.org/">
-              COVID-19 Library
-            </ExternalLink>
-          </MenuNavListItem>
-          <MenuNavListItem>
-            <ExternalLink href="#">Community Health Academy</ExternalLink>
-          </MenuNavListItem>
-        </MenuNavList>
-      </MenuNav>
-    </>
+    <MenuContainer>
+      <HamburgerButton
+        role="button"
+        aria-controls="navigation"
+        aria-expanded={menuOpen}
+        aria-label="navigation menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+        menuOpen={menuOpen}
+      />
+      <Navigation id="navigation" role="navigation" menuOpen={menuOpen}>
+        <MenuList>
+          <MenuListItem>
+            <GatsbyLink to="/our-mission/">Our Mission</GatsbyLink>
+          </MenuListItem>
+          <MenuListItem>
+            <GatsbyLink to="/our-members/">Our Members</GatsbyLink>
+          </MenuListItem>
+          <MenuListItem>
+            <GatsbyLink to="/our-mission/">COVID-19 Library</GatsbyLink>
+          </MenuListItem>
+          <MenuListItem>
+            <GatsbyLink to="/our-mission/">Community Health Academy</GatsbyLink>
+          </MenuListItem>
+        </MenuList>
+      </Navigation>
+    </MenuContainer>
   )
 }
 
-const MenuButton = styled.button`
-  width: 40px;
-  height: 32px;
-  padding: 6px 6px 0 6px;
+const MenuContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+`
+
+const HamburgerButton = styled.button`
+  background: ${color.white};
   border: none;
-  background: transparent;
-  display: block;
-  z-index: 999;
+  cursor: pointer;
+  height: 40px;
+  width: 50px;
+  z-index: 3;
 
-  div {
-    width: 33px;
-    height: 4px;
+  &:before {
+    border-bottom: 2px solid ${color.fullBlack};
+    border-top: ${props =>
+      props.menuOpen ? "transparent" : `2px solid ${color.fullBlack}`};
+    content: "";
+    display: block;
+    height: 8px;
+    margin: auto;
+    width: 20px;
+    transition: all 0.3s ease-in-out;
+    transform: ${props =>
+      props.menuOpen
+        ? "rotate(45deg) translateX(1px) translateY(-2px)"
+        : "none"};
+  }
+
+  &:after {
     background: ${color.fullBlack};
-    margin-bottom: 5px;
-    transform-origin: 4px 0px;
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-
-    &:nth-of-type(1) {
-      opacity: 1;
-      transform: ${props =>
-        props.open ? "rotate(45deg) translate(-2px, -1px)" : "none"};
-    }
-
-    &:nth-of-type(2) {
-      opacity: ${props => (props.open ? "0" : "1")};
-      transform: ${props =>
-        props.open ? "rotate(0deg) scale(0.2, 0.2)" : "none"};
-    }
-
-    &:nth-of-type(3) {
-      transform-origin: 0% 100%;
-      transform: ${props =>
-        props.open ? "rotate(-45deg) translate(0, -1px)" : ""};
-
-}
-
-
-    }
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 4px auto 0 auto;
+    width: 20px;
+    transition: all 0.3s ease-in-out;
+    transform: ${props =>
+      props.menuOpen
+        ? "rotate(-45deg) translateY(-6px) translateX(5px)"
+        : "none"};
   }
 
   ${above.desktop`
     display: none;
   `}
 `
-
-const MenuNav = styled.nav`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: ${color.white};
-  z-index: 99;
+const Navigation = styled.nav`
+  height: 100%;
+  width: 215px;
+  position: fixed;
+  z-index: 1;
+  top: 74px;
+  right: ${props => (props.menuOpen ? "0" : "-215px")};
+  background-color: ${props =>
+    props.menuOpen ? `${color.midGrey}` : `${color.white}`};
+  overflow-x: hidden;
+  transition: 0.5s;
 
   ${above.desktop`
     position: relative;
+    top: 0;
+    width: 100%;
+    right: 0;
+    transition: none;
   `}
 `
 
-const MenuNavList = styled.ul`
+const MenuList = styled.ul`
   list-style-type: none;
-  margin: 0;
-  padding: ${props => (props.open ? "20px" : "0")};
-  overflow: hidden;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  clear: both;
-  height: ${props => (props.open ? "100vh" : "0")};
-  transition: max-height 0.2s ease-out;
+  margin: 40px 20px;
 
   ${above.desktop`
-      flex-direction: row;
-     max-height: 240px;
-     overflow: visible;
-     align-items: center;
+    flex-direction: row;
+    margin: 16px;
   `}
 `
-
-const MenuNavListItem = styled.li`
-  margin-right: 58px;
+const MenuListItem = styled.li`
+  text-align: right;
+  margin-bottom: 50px;
+  ${above.desktop`
+    margin: 0 60px 0 0;
+  `}
 `
 
 const GatsbyLink = styled(Link)`
   ${gilroyMedium};
+  color: ${color.moreBlack};
+  font-size: 17px;
   text-decoration: none;
-  color: ${color.fullBlack};
 
-  &:hover,
-  &:active {
-    color: ${color.red};
-  }
-`
+  ${above.desktop`
+    color: ${color.otherBlack};
+    font-size: 14px;
+  `}
 
-const ExternalLink = styled.a`
-  ${gilroyMedium};
-  text-decoration: none;
-  color: ${color.fullBlack};
-
-  &:hover,
-  &:active {
+  &:hover {
     color: ${color.red};
   }
 `
 
 Menu.propTypes = {
-  open: PropTypes.bool.isRequired,
-  setOpen: PropTypes.func.isRequired,
+  menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
 }
 
 export default Menu

@@ -21,9 +21,20 @@ const OurMissionPage = ({ path }) => {
   `)
 
   const theme = {
+    heroTextPosition: "absolute",
+    heroTextPositionTop: "50%",
+    heroTextPositionLeft: "50%",
+    heroTextPositionTopDesk: "50%",
+    heroTextPositionLeftDesk: "50%",
+    heroTextMarginRight: "-50%",
+    heroTextTransform: "translate(-50%, -50%)",
+    heroHeight: "320px",
     heroBorder: `8px solid ${color.lightTeal}`,
-    heroTextBackground: `${color.lightTeal}`,
+    heroTextBg: `${color.lightTeal}`,
     footerBorder: `1px solid ${color.grey}`,
+    heroTextSize: "30px",
+    heroTextAlign: "center",
+    heroTextFontFamily: `${gilroySemiBold}`,
   }
 
   return (

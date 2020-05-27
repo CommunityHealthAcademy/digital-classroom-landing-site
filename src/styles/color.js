@@ -3,6 +3,7 @@ export const color = {
   fullBlack: "#000000",
   otherBlack: "#141414",
   differentBlack: "#161616",
+  moreBlack: "#262626",
   white: "#ffffff",
   lightTeal: "#85bbb8",
   teal: "#84b9b6",
@@ -12,4 +13,5 @@ export const color = {
   darkBlue: "#164780",
   orange: "#ff4a2f",
   grey: "#d1cece",
+  midGrey: "#e2e2e2",
 }

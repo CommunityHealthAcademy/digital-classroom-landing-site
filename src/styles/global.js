@@ -5,8 +5,19 @@ import { gilroyRegular, gilroyBold } from "../styles"
 const GlobalStyles = createGlobalStyle`
 	${normalize}
 
+	html {
+		box-sizing: border-box;
+	  }
+	  
+	*,
+	:before,
+	:after {
+	box-sizing: inherit;
+	}
+
 	body {
-		${gilroyRegular}
+		${gilroyRegular};
+		overflow-x: hidden;
 	}
 
 	strong {
@@ -16,6 +27,11 @@ const GlobalStyles = createGlobalStyle`
 	p {
 		margin: 24px 0;
 	}
+
+	.resize-animation-stopper * {
+		animation: none !important;
+		transition: none !important;
+	  }
 `
 
 export default GlobalStyles
