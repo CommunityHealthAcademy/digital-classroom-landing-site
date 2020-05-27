@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { color, above, gilroyMedium } from "../../styles"
@@ -47,25 +48,12 @@ const Footer = () => {
           <FooterHeading>About</FooterHeading>
           <FooterList>
             <li>
-              <FooterLink href="#">About COVID-19 Digital Classroom</FooterLink>
+              <GatsbyLink to="/our-mission">Our Mission</GatsbyLink>
             </li>
             <li>
-              <FooterLink href="#">How to use COVID-19 Library</FooterLink>
-            </li>
-            <li>
-              <FooterLink href="#">Creative Commons FAQs</FooterLink>
-            </li>
-            <li>
-              <FooterLink href="#">Resource Guidelines</FooterLink>
-            </li>
-            <li>
-              <FooterLink href="#">Content Review Process</FooterLink>
+              <GatsbyLink to="/our-members">Our Members</GatsbyLink>
             </li>
           </FooterList>
-        </FooterSection>
-        <FooterSection aria-labelledby="footer-legal">
-          <FooterHeading>Legal</FooterHeading>
-          <FooterLink href="#">Terms and Privacy Policy</FooterLink>
         </FooterSection>
       </FooterSectionContainer>
     </FooterContainer>
@@ -116,6 +104,14 @@ const FooterHeading = styled.h2`
 `
 
 const FooterLink = styled.a`
+  text-decoration: none;
+  ${gilroyMedium};
+  font-size: 14px;
+  line-height: 28px;
+  color: ${color.darkBlue};
+`
+
+const GatsbyLink = styled(Link)`
   text-decoration: none;
   ${gilroyMedium};
   font-size: 14px;

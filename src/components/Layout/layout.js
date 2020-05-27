@@ -54,7 +54,7 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
               alt="Learn how you can use our COVID-19 Library"
             />
           </Covid19LibraryCard>
-          <CommunityHealthAcademyCard href="https://communityhealthacademy.course.tc">
+          <CommunityHealthAcademyCard href="https://communityhealthacademy.course.tc/catalog/track/covid-19-digital-classroom-course-series">
             <CommunityHeading>
               <span>COVID-19 Online Courses</span>
             </CommunityHeading>

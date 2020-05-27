@@ -36,10 +36,12 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
             <GatsbyLink to="/our-members/">Our Members</GatsbyLink>
           </MenuListItem>
           <MenuListItem>
-            <GatsbyLink to="/our-mission/">COVID-19 Library</GatsbyLink>
+            <MenuLink href="/our-mission/">COVID-19 Library</MenuLink>
           </MenuListItem>
           <MenuListItem>
-            <GatsbyLink to="/our-mission/">Community Health Academy</GatsbyLink>
+            <MenuLink href="https://lastmilehealth.org/what-we-do/community-health-academy/">
+              Community Health Academy
+            </MenuLink>
           </MenuListItem>
         </MenuList>
       </Navigation>
@@ -137,6 +139,22 @@ const MenuListItem = styled.li`
 `
 
 const GatsbyLink = styled(Link)`
+  ${gilroyMedium};
+  color: ${color.moreBlack};
+  font-size: 17px;
+  text-decoration: none;
+
+  ${above.desktop`
+    color: ${color.otherBlack};
+    font-size: 14px;
+  `}
+
+  &:hover {
+    color: ${color.red};
+  }
+`
+
+const MenuLink = styled.a`
   ${gilroyMedium};
   color: ${color.moreBlack};
   font-size: 17px;
