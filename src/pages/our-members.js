@@ -319,6 +319,10 @@ const SectionDivider = styled.div`
   ${above.desktop`
     max-width: 920px;
   `}
+
+  &:last-of-type {
+    margin-bottom: 144px;
+  }
 `
 
 const ItalicText = styled.a`
