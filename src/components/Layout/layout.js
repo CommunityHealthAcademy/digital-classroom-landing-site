@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import Header from "../Header/header"
 import Footer from "../Footer/footer"
@@ -17,60 +18,57 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
       <Header landingPage={landingPage} />
       <Hero heroImg={heroImg} heroText={heroText} landingPage={landingPage} />
       {landingPage && (
-        <InfoCards>
-          <OurMissionCard>
-            <SectionHeading>Our Mission</SectionHeading>
+        <LinkCards>
+          <OurMissionCard to="/our-mission">
+            <SectionHeading>
+              <span>Our Mission</span>
+            </SectionHeading>
             <SectionText>
               Dedicated to sharing medically reviewed content to help slow the
               spread of COVID-19
             </SectionText>
-            <SectionLink href="">
-              <SectionLinkImg
-                src={Arrow}
-                alt="Find out more about our mission"
-              />
-            </SectionLink>
+            <SectionLinkImg src={Arrow} alt="Find out more about our mission" />
           </OurMissionCard>
-          <OurMembersCard>
-            <SectionHeading>Our Members</SectionHeading>
+          <OurMembersCard to="/our-members">
+            <SectionHeading>
+              <span>Our Members</span>
+            </SectionHeading>
             <SectionText>
               Dedicated to helping health workers access the training &
               information they need to save lives.
             </SectionText>
-            <SectionLink href="">
-              <SectionLinkImg
-                src={Arrow}
-                alt="Find out more about our members"
-              />
-            </SectionLink>
+
+            <SectionLinkImg src={Arrow} alt="Find out more about our members" />
           </OurMembersCard>
           <Covid19LibraryCard>
-            <SectionHeading>COVID-19 Library</SectionHeading>
+            <SectionHeading>
+              <span>COVID-19 Library</span>
+            </SectionHeading>
             <SectionText>
               Multimedia content for empowering community-based health workers
               and citizens across the globe.
             </SectionText>
-            <SectionLink href="">
-              <SectionLinkImg
-                src={Arrow}
-                alt="Learn how you can use our COVID-19 Library"
-              />
-            </SectionLink>
+
+            <SectionLinkImg
+              src={Arrow}
+              alt="Learn how you can use our COVID-19 Library"
+            />
           </Covid19LibraryCard>
           <CommunityHealthAcademyCard>
-            <CommunityHeading>Community Health Academy</CommunityHeading>
+            <CommunityHeading>
+              <span>Community Health Academy</span>
+            </CommunityHeading>
             <SectionText>
               High-quality, interactive, open-source training courses for
               community-based health workers
             </SectionText>
-            <SectionLink href="">
-              <SectionLinkImg
-                src={Arrow}
-                alt="Learn more about our open-source training courses"
-              />
-            </SectionLink>
+
+            <SectionLinkImg
+              src={Arrow}
+              alt="Learn more about our open-source training courses"
+            />
           </CommunityHealthAcademyCard>
-        </InfoCards>
+        </LinkCards>
       )}
 
       <main>{children}</main>
@@ -79,7 +77,7 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
   )
 }
 
-const InfoCards = styled.article`
+const LinkCards = styled.section`
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -96,9 +94,10 @@ const InfoCards = styled.article`
   `}
 `
 
-const OurMissionCard = styled.section`
+const OurMissionCard = styled(Link)`
   background-color: ${color.teal};
   padding: 24px 28px;
+  text-decoration: none;
 
   ${above.desktop`
     margin-right: 14px;
@@ -106,23 +105,33 @@ const OurMissionCard = styled.section`
     height: 230px;
     padding: 40px 24px 28px 24px;
   `}
+
+  &:hover {
+    filter: brightness(108%);
+  }
 `
 
-const OurMembersCard = styled.section`
+const OurMembersCard = styled(Link)`
   background-color: ${color.green};
   padding: 24px 28px;
+  text-decoration: none;
 
   ${above.desktop`
-  margin-right: 14px;
-  position: relative;
-  height: 230px;
-  padding: 40px 24px 28px 24px;
-`}
+    margin-right: 14px;
+    position: relative;
+    height: 230px;
+    padding: 40px 24px 28px 24px;
+  `}
+
+  &:hover {
+    filter: brightness(108%);
+  }
 `
 
-const Covid19LibraryCard = styled.section`
+const Covid19LibraryCard = styled(Link)`
   background-color: ${color.blue};
   padding: 24px 28px;
+  text-decoration: none;
 
   ${above.desktop`
     margin-right: 14px;
@@ -130,11 +139,16 @@ const Covid19LibraryCard = styled.section`
     height: 230px;
     padding: 40px 24px 28px 24px;
   `}
+
+  &:hover {
+    filter: brightness(108%);
+  }
 `
 
-const CommunityHealthAcademyCard = styled.section`
+const CommunityHealthAcademyCard = styled(Link)`
   background-color: ${color.pink};
   padding: 24px 28px;
+  text-decoration: none;
 
   ${above.desktop`
     margin-right: 14px;
@@ -142,6 +156,10 @@ const CommunityHealthAcademyCard = styled.section`
     height: 230px;
     padding: 40px 24px 28px 24px;
   `}
+
+  &:hover {
+    filter: brightness(108%);
+  }
 `
 
 const SectionHeading = styled.h2`
@@ -154,6 +172,12 @@ const SectionHeading = styled.h2`
   ${above.desktop`
     font-size: 24px;
   `}
+
+  span {
+    &:hover {
+      border-bottom: 2px solid ${color.white};
+    }
+  }
 `
 
 const CommunityHeading = styled.h2`
@@ -166,6 +190,12 @@ const CommunityHeading = styled.h2`
   ${above.desktop`
     font-size: 24px;
   `}
+
+  span {
+    &:hover {
+      border-bottom: 2px solid ${color.white};
+    }
+  }
 `
 
 const SectionText = styled.p`
@@ -175,8 +205,6 @@ const SectionText = styled.p`
   line-height: 20px;
   margin: 0 0 20px 0;
 `
-
-const SectionLink = styled.a``
 
 const SectionLinkImg = styled.img`
   width: 23px;

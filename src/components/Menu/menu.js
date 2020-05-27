@@ -98,7 +98,7 @@ const HamburgerButton = styled.button`
 const Navigation = styled.nav`
   height: 100%;
   width: 215px;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 74px;
   right: ${props => (props.menuOpen ? "0" : "-215px")};
