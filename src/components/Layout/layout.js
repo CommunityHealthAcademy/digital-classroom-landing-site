@@ -56,11 +56,11 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
           </Covid19LibraryCard>
           <CommunityHealthAcademyCard href="https://communityhealthacademy.course.tc">
             <CommunityHeading>
-              <span>Community Health Academy</span>
+              <span>COVID-19 Online Courses</span>
             </CommunityHeading>
             <SectionText>
-              High-quality, interactive, open-source training courses for
-              community-based health workers
+              Open-sourced training delivered on the Community Health Academy's
+              Platform.
             </SectionText>
 
             <SectionLinkImg
