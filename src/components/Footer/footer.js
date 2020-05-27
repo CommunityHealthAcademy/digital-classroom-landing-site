@@ -17,10 +17,29 @@ const Footer = () => {
           <FooterHeading>Follow Us</FooterHeading>
           <FooterList>
             <li>
-              <FooterLink href="#">Twitter</FooterLink>
+              <FooterLink href="https://www.facebook.com/COVID19DigitalClassroom">
+                Facebook
+              </FooterLink>
             </li>
             <li>
-              <FooterLink href="#">Website</FooterLink>
+              <FooterLink href="https://twitter.com/C19DigitalClass">
+                Twitter
+              </FooterLink>
+            </li>
+            <li>
+              <FooterLink href="https://www.linkedin.com/company/covid-19-digitalclassroom">
+                LinkedIn
+              </FooterLink>
+            </li>
+            <li>
+              <FooterLink href="https://www.youtube.com/channel/UCFsEU33sT-eRLQY-N5Vo3PQ/">
+                YouTube
+              </FooterLink>
+            </li>
+            <li>
+              <FooterLink href="https://vimeo.com/covid19digitalclassroom">
+                Vimeo Pro
+              </FooterLink>
             </li>
           </FooterList>
         </FooterSection>
