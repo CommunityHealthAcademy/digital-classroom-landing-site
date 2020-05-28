@@ -8,7 +8,7 @@ import { color, gilroyBold } from "../styles"
 const IndexPage = ({ path }) => {
   const data = useStaticQuery(graphql`
     query IndexPageQuery {
-      heroImg: file(relativePath: { eq: "image-homepage.png" }) {
+      heroImg: file(relativePath: { eq: "image-homepage.jpg" }) {
         id
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
