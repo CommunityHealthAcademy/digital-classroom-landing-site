@@ -17,8 +17,12 @@ const GlobalStyles = createGlobalStyle`
 
 	body {
 		${gilroyRegular};
-		overflow-x: hidden;
 	}
+
+div[id="gatsby-focus-wrapper"] {
+	position: relative;
+	overflow-x: hidden;
+}
 
 	strong {
 		${gilroyBold};
