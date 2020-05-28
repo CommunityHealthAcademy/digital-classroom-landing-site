@@ -121,9 +121,14 @@ const OurMembersPage = ({ path }) => {
             <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
           </a>
           <SectionText>
-            <ItalicText href="">The Community Health Academy</ItalicText> serves
-            as the lead for the <strong>COVID-19 Digital Classroom</strong>. The
-            Academy, housed at <ItalicText href="">Last Mile Health</ItalicText>
+            <ItalicText href="https://lastmilehealth.org/what-we-do/community-health-academy/">
+              The Community Health Academy
+            </ItalicText>{" "}
+            serves as the lead for the
+            <strong>COVID-19 Digital Classroom</strong>. The Academy, housed at
+            <ItalicText href="https://lastmilehealth.org">
+              Last Mile Health
+            </ItalicText>
             , draws on its partnerships with Ministers of Health in multiple
             countries and leverages its experience developing online and
             mobile-optimized training to inform how content is designed for
@@ -138,13 +143,13 @@ const OurMembersPage = ({ path }) => {
             <MemberLogoTwo fluid={data.memberLogo2.childImageSharp.fluid} />
           </a>
           <SectionText>
-            <ItalicText href="">CORE Group</ItalicText> draws on decades of
-            convening experience, including in response to earlier pandemics.
-            CORE Group’s broad base of global health practitioner experts serve
-            as technical reviewers, contributors, and content developers to
-            focus on adaptations for important populations affected, such as
-            people with disabilities, people living in urban informal
-            settlements and pastoralist communities.
+            <ItalicText href="https://coregroup.org">CORE Group</ItalicText>{" "}
+            draws on decades of convening experience, including in response to
+            earlier pandemics. CORE Group’s broad base of global health
+            practitioner experts serve as technical reviewers, contributors, and
+            content developers to focus on adaptations for important populations
+            affected, such as people with disabilities, people living in urban
+            informal settlements and pastoralist communities.
           </SectionText>
         </ContentContainer>
       </Section>
@@ -155,10 +160,12 @@ const OurMembersPage = ({ path }) => {
             <MemberLogoThree fluid={data.memberLogo3.childImageSharp.fluid} />
           </a>
           <SectionText>
-            <ItalicText href="">Medical Aid Films</ItalicText> is leading
-            development of multimedia content (e.g., animation for messaging and
-            training) to address issues of poor or low levels of literacy in
-            some of the most vulnerable populations in the world.
+            <ItalicText href="https://www.medicalaidfilms.org">
+              Medical Aid Films
+            </ItalicText>{" "}
+            is leading development of multimedia content (e.g., animation for
+            messaging and training) to address issues of poor or low levels of
+            literacy in some of the most vulnerable populations in the world.
           </SectionText>
         </ContentContainer>
       </Section>
@@ -169,11 +176,15 @@ const OurMembersPage = ({ path }) => {
             <MemberLogoFour fluid={data.memberLogo4.childImageSharp.fluid} />
           </a>
           <SectionText>
-            <ItalicText href="">TechChange</ItalicText> is leading the
-            development of high-quality, interactive online training and
-            developing a series of short, interactive, and engaging courses for
-            community-based Health Workers which are hosted on the
-            <ItalicText> Community Health Academy platform.</ItalicText>
+            <ItalicText href="https://www.techchange.org">
+              TechChange
+            </ItalicText>{" "}
+            is leading the development of high-quality, interactive online
+            training and developing a series of short, interactive, and engaging
+            courses for community-based Health Workers which are hosted on the
+            <ItalicText href="https://lastmilehealth.org/what-we-do/community-health-academy/">
+              Community Health Academy platform.
+            </ItalicText>
           </SectionText>
         </ContentContainer>
       </Section>
@@ -184,9 +195,11 @@ const OurMembersPage = ({ path }) => {
             <MemberLogoFive fluid={data.memberLogo5.childImageSharp.fluid} />
           </a>
           <SectionText>
-            <ItalicText href="">Translators Without Borders</ItalicText> are
-            supporting translation of the animations and training courses into a
-            wide range of languages to ensure they are accessible for
+            <ItalicText href="https://translatorswithoutborders.org">
+              Translators Without Borders
+            </ItalicText>{" "}
+            are supporting translation of the animations and training courses
+            into a wide range of languages to ensure they are accessible for
             community-based health workers across multiple countries.
           </SectionText>
         </ContentContainer>
