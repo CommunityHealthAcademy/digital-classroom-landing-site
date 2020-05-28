@@ -8,7 +8,7 @@ import { color, above, gilroySemiBold, gilroyRegular } from "../styles"
 const NotFoundPage = ({ path }) => {
   const data = useStaticQuery(graphql`
     query NotFoundPageQuery {
-      heroImg: file(relativePath: { eq: "image-homepage.png" }) {
+      heroImg: file(relativePath: { eq: "image-homepage.jpg" }) {
         id
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
