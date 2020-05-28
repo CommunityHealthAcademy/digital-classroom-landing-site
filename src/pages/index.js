@@ -30,7 +30,7 @@ const IndexPage = ({ path }) => {
     heroTextPositionTopDesk: "108px",
     heroTextPositionLeftDesk: "140px",
     heroTextMaxWidth: "1440px",
-    heroTextBg: color.red,
+    heroTextBg: color.otherRed,
     heroTextSize: "14px",
     heroTextLetterSpaceMob: "0.24px",
     heroTextLetterSpaceDesk: "0.44px",
@@ -40,8 +40,7 @@ const IndexPage = ({ path }) => {
     <Layout
       path={path}
       heroImg={data.heroImg.childImageSharp.fluid}
-      heroText="Quality assured COVID-19 library of resources for community-based
-      healthworkers"
+      heroText="Quality-assured COVID-19 library of resources for community-based health workers"
       theme={theme}
       landingPage
     >

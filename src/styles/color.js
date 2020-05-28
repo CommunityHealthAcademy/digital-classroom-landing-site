@@ -1,5 +1,6 @@
 export const color = {
   red: "#ee3d23",
+  otherRed: "#A12717",
   fullBlack: "#000000",
   otherBlack: "#141414",
   differentBlack: "#161616",

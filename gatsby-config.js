@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `COVID-19 Digital Classroom`,
-    description: `Quality assured COVID-19 library of resources for community-based healthworkers`,
+    description: `Quality-assured COVID-19 library of resources for community-based health workers`,
     author: `COVID-19 Digital Classroom`,
   },
   plugins: [
