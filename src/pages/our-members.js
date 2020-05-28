@@ -124,8 +124,8 @@ const OurMembersPage = ({ path }) => {
             <ItalicText href="https://lastmilehealth.org/what-we-do/community-health-academy/">
               The Community Health Academy
             </ItalicText>{" "}
-            serves as the lead for the
-            <strong>COVID-19 Digital Classroom</strong>. The Academy, housed at
+            serves as the lead for the{" "}
+            <strong>COVID-19 Digital Classroom</strong>. The Academy, housed at{" "}
             <ItalicText href="https://lastmilehealth.org">
               Last Mile Health
             </ItalicText>
@@ -183,6 +183,7 @@ const OurMembersPage = ({ path }) => {
             training and developing a series of short, interactive, and engaging
             courses for community-based Health Workers which are hosted on the
             <ItalicText href="https://lastmilehealth.org/what-we-do/community-health-academy/">
+              {" "}
               Community Health Academy platform.
             </ItalicText>
           </SectionText>
