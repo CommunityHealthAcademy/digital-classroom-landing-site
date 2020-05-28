@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterSectionContainer>
-        <FooterSection aria-labelledby="contact us">
+        <FooterSection aria-label="contact us">
           <FooterHeading>Contact Us</FooterHeading>
           <FooterLink href="mailto:info@covid-19digitalclassroom.org">
             info@covid-19digitalclassroom.org
           </FooterLink>
         </FooterSection>
-        <FooterSection aria-labelledby="social links">
+        <FooterSection aria-label="social links">
           <FooterHeading>Follow Us</FooterHeading>
           <FooterList>
             <li>
@@ -44,7 +44,7 @@ const Footer = () => {
             </li>
           </FooterList>
         </FooterSection>
-        <FooterSection aria-labelledby="About COVID-19 Digital Classroom">
+        <FooterSection aria-label="About COVID-19 Digital Classroom">
           <FooterHeading>About</FooterHeading>
           <FooterList>
             <li>
