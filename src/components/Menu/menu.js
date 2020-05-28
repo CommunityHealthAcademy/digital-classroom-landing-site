@@ -109,7 +109,7 @@ const Navigation = styled.nav`
   background-color: ${props =>
     props.menuOpen ? `${color.midGrey}` : `${color.white}`};
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.5s ease;
 
   ${above.desktop`
     position: relative;
@@ -138,6 +138,10 @@ const MenuListItem = styled.li`
   ${above.desktop`
     margin: 0 60px 0 0;
   `}
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 `
 
 const GatsbyLink = styled(Link)`

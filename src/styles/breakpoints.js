@@ -2,7 +2,8 @@ import { css } from "styled-components"
 
 export const breakpoint = {
   mobile: "375px",
-  desktop: "1440px",
+  desktop: "960px",
+  desktopLarge: "1440px",
 }
 
 export const above = Object.keys(breakpoint).reduce((acc, name) => {

@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
 
 	html {
 		box-sizing: border-box;
+
 	  }
 	  
 	*,
@@ -17,12 +18,13 @@ const GlobalStyles = createGlobalStyle`
 
 	body {
 		${gilroyRegular};
+		
 	}
 
-div[id="gatsby-focus-wrapper"] {
-	position: relative;
-	overflow-x: hidden;
-}
+	div[id="gatsby-focus-wrapper"] {
+		position: relative;
+		overflow-x: hidden;
+	}
 
 	strong {
 		${gilroyBold};

@@ -39,12 +39,17 @@ const Heading = styled.div`
   transform: ${props => props.theme.heroTextTransform};
 
   ${above.desktop`
-    max-width: ${props => props.theme.heroTextMaxWidth};
+    max-width: ${props => props.theme.heroTextMaxWidthDesk};
     margin: 0 auto;
     top: ${props => props.theme.heroTextPositionTopDesk};
     left: ${props => props.theme.heroTextPositionLeftDesk};
     transform: ${props => props.theme.heroTextTransform};
   `};
+
+  ${above.desktopLarge`
+    max-width: ${props => props.theme.heroTextMaxWidthDeskLg};  
+    left: ${props => props.theme.heroTextPositionLeftDeskLg};
+  `}
 `
 
 const HeroText = styled.h1`

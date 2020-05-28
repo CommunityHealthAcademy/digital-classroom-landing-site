@@ -83,14 +83,25 @@ const LinkCards = styled.section`
   z-index: 1;
 
   ${above.desktop`
-  position: absolute;
+    position: absolute;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1024px;
+    left: 0;
+    right: 0;
+    top: 500px;
+    padding: 0 28px;
+  `}
+
+  ${above.desktopLarge`
+    position: absolute;
     flex-direction: row;
     margin: 0 auto;
     max-width: 1160px;
     left: 0;
     right: 0;
-    bottom: 30%;
     top: 500px;
+    padding: 0;
   `}
 `
 

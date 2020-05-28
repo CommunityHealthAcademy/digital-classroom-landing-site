@@ -59,7 +59,7 @@ const Section = styled.section`
   margin: 0 auto;
   padding: 40px 24px;
 
-  ${above.desktop`
+  ${above.desktopLarge`
     padding: 100px 0 120px 0;
   `}
 `

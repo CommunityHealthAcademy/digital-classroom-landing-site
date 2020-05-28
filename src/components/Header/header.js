@@ -23,14 +23,22 @@ const HeaderContainer = styled.header`
   align-items: center;
 
   ${above.desktop`
-    max-width: 1440px;
-    padding: 20px 140px 14px 140px;
+    max-width: 1024px;
     flex-direction: row;
     margin: 0 auto;
+  `}
+
+  ${above.desktopLarge`
+    max-width: 1440px;
+    padding: 20px 140px 14px 140px;
   `}
 `
 const Logo = styled(Link)`
   ${above.desktop`
+    margin-right: 60px;
+  `}
+
+  ${above.desktopLarge`
     margin-right: 108px;
   `}
 `
