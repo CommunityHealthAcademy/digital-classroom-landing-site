@@ -79,6 +79,7 @@ const FooterSectionContainer = styled.div`
     max-width: 1440px;
     margin: 0 auto;
     padding: 54px 140px 88px 140px;
+    justify-content: center;
   `};
 `
 
