@@ -12,7 +12,7 @@ const Hero = ({ heroImg, heroText, landingPage }) => (
         <span>{heroText}</span>
       </HeroText>
       {landingPage && (
-        <HeroLink href="#">
+        <HeroLink href="https://covid-19library.org">
           Go to COVID-19 Library <HeroLinkImg src={Arrow} alt="" />
         </HeroLink>
       )}
