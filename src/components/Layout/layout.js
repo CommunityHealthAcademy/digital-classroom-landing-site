@@ -59,7 +59,7 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
               <span>COVID-19 Online Courses</span>
             </CommunityHeading>
             <SectionText>
-              Open-sourced training delivered on the Community Health Academy's
+              Open-source training delivered on the Community Health Academy's
               Platform.
             </SectionText>
 

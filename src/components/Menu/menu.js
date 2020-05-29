@@ -41,8 +41,8 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
             </MenuLink>
           </MenuListItem>
           <MenuListItem>
-            <MenuLink href="https://lastmilehealth.org/what-we-do/community-health-academy/">
-              Community Health Academy
+            <MenuLink href="https://communityhealthacademy.course.tc/catalog/track/covid-19-digital-classroom-course-series">
+              COVID-19 Online Courses
             </MenuLink>
           </MenuListItem>
         </MenuList>

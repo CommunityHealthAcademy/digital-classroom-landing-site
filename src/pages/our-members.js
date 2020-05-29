@@ -26,7 +26,7 @@ const OurMembersPage = ({ path }) => {
       }
 
       memberLogo1: file(
-        relativePath: { eq: "Community-Health-Academy_Last-Mile-Health.png" }
+        relativePath: { eq: "Community-Health-Academy_Last-Mile-Health.jpg" }
       ) {
         id
         childImageSharp {
@@ -163,7 +163,7 @@ const OurMembersPage = ({ path }) => {
             <ItalicText href="https://www.medicalaidfilms.org">
               Medical Aid Films
             </ItalicText>{" "}
-            is leading development of multimedia content (e.g., animation for
+            is leading developer of multimedia content (e.g., animation for
             messaging and training) to address issues of poor or low levels of
             literacy in some of the most vulnerable populations in the world.
           </SectionText>
