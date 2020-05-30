@@ -38,7 +38,6 @@ const NotFoundPage = ({ path }) => {
 
   return (
     <Layout
-      path={path}
       heroImg={data.heroImg.childImageSharp.fluid}
       heroText="Page Not Found"
       theme={theme}

@@ -40,7 +40,6 @@ const IndexPage = ({ path }) => {
 
   return (
     <Layout
-      path={path}
       heroImg={data.heroImg.childImageSharp.fluid}
       heroText="Quality-assured COVID-19 library of resources for community-based health workers"
       theme={theme}

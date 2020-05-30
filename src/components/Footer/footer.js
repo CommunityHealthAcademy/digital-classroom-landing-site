@@ -55,6 +55,16 @@ const Footer = () => {
             </li>
           </FooterList>
         </FooterSection>
+        <FooterSection aria-label="About COVID-19 Digital Classroom">
+          <FooterHeading>More Links</FooterHeading>
+          <FooterList>
+            <li>
+              <GatsbyLink to="/disclaimer">
+                COVID-19 Library Disclaimer
+              </GatsbyLink>
+            </li>
+          </FooterList>
+        </FooterSection>
       </FooterSectionContainer>
     </FooterContainer>
   )

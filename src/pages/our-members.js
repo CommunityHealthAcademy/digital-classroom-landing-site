@@ -94,7 +94,6 @@ const OurMembersPage = ({ path }) => {
 
   return (
     <Layout
-      path={path}
       heroImg={data.heroImg.childImageSharp.fluid}
       heroText="Our Members"
       theme={theme}

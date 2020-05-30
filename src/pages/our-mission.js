@@ -39,7 +39,6 @@ const OurMissionPage = ({ path }) => {
 
   return (
     <Layout
-      path={path}
       heroImg={data.file.childImageSharp.fluid}
       heroText="Our Mission"
       theme={theme}
