@@ -35,6 +35,7 @@ const OurMissionPage = ({ path }) => {
     heroTextSize: "30px",
     heroTextAlign: "center",
     heroTextFontFamily: `${gilroySemiBold}`,
+    heroTextLineHeight: "30px",
   }
 
   return (

@@ -21,6 +21,7 @@ const Disclaimer = () => {
     heroTextSize: "30px",
     heroTextAlign: "center",
     heroTextFontFamily: `${gilroySemiBold}`,
+    heroTextLineHeight: "50px",
   }
 
   const data = useStaticQuery(graphql`

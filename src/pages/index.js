@@ -36,6 +36,7 @@ const IndexPage = ({ path }) => {
     heroTextSize: "14px",
     heroTextLetterSpaceMob: "0.24px",
     heroTextLetterSpaceDesk: "0.44px",
+    heroTextLineHeight: "30px",
   }
 
   return (

@@ -57,7 +57,7 @@ const HeroText = styled.h1`
   margin: 0 0 20px 0;
   font-size: ${props => props.theme.heroTextSize};
   letter-spacing: 0.24px;
-  line-height: 50px;
+  line-height: ${props => props.theme.heroTextLineHeight};
   color: ${color.white};
 
   span {

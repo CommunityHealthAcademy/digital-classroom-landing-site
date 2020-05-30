@@ -90,6 +90,7 @@ const OurMembersPage = ({ path }) => {
     footerBorder: `1px solid ${color.grey}`,
     heroTextSize: "30px",
     heroTextFontFamily: `${gilroySemiBold}`,
+    heroTextLineHeight: "30px",
   }
 
   return (
