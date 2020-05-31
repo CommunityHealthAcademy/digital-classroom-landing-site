@@ -32,7 +32,7 @@ const IndexPage = ({ path }) => {
     heroTextPositionLeftDeskLg: "140px",
     heroTextMaxWidthDesk: "1024px",
     heroTextMaxWidthDeskLg: "1440px",
-    heroTextBg: color.otherRed,
+    heroTextBg: color.red,
     heroTextSize: "14px",
     heroTextLetterSpaceMob: "0.24px",
     heroTextLetterSpaceDesk: "0.44px",

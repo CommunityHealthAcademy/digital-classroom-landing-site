@@ -121,7 +121,7 @@ const OurMembersPage = ({ path }) => {
             <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
           </a>
           <SectionText>
-            <ItalicText href="https://lastmilehealth.org/what-we-do/community-health-academy/">
+            <ItalicText href="https://www.communityhealthacademy.org">
               The Community Health Academy
             </ItalicText>{" "}
             serves as the lead for the{" "}
@@ -182,7 +182,7 @@ const OurMembersPage = ({ path }) => {
             is leading the development of high-quality, interactive online
             training and developing a series of short, interactive, and engaging
             courses for community-based Health Workers which are hosted on the
-            <ItalicText href="https://lastmilehealth.org/what-we-do/community-health-academy/">
+            <ItalicText href="https://www.communityhealthacademy.org">
               {" "}
               Community Health Academy platform.
             </ItalicText>
