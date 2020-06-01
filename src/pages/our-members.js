@@ -181,7 +181,7 @@ const OurMembersPage = ({ path }) => {
             </ItalicText>{" "}
             is leading the development of high-quality, interactive online
             training and developing a series of short, interactive, and engaging
-            courses for community-based Health Workers which are hosted on the
+            courses for community-based health workers which are hosted on the
             <ItalicText href="https://communityhealthacademy.course.tc/">
               {" "}
               Community Health Academy platform.

@@ -86,17 +86,26 @@ const FooterSectionContainer = styled.div`
 
   ${above.desktop`
     flex-direction: row;
-    max-width: 1440px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 54px 140px 88px 140px;
+    padding: 54px 90px 88px 90px;
     justify-content: center;
   `};
+
+  ${above.desktopLarge`
+    max-width: 1440px;
+    padding: 54px 140px 88px 140px;
+  `}
 `
 
 const FooterSection = styled.div`
   margin-bottom: 40px;
 
   ${above.desktop`
+    margin-right: 75px;
+  `}
+
+  ${above.desktopLarge`
     margin-right: 144px;
   `}
 

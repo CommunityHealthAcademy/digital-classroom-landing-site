@@ -42,7 +42,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
           </MenuListItem>
           <MenuListItem>
             <MenuLink href="https://communityhealthacademy.course.tc/catalog/track/covid-19-digital-classroom-course-series">
-              COVID-19 Online Courses
+              COVID-19 Courses
             </MenuLink>
           </MenuListItem>
         </MenuList>

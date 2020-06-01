@@ -46,7 +46,7 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
             </SectionHeading>
             <SectionText>
               Multimedia content for empowering community-based health workers
-              and citizens across the globe.
+              and local communities globally.
             </SectionText>
 
             <SectionLinkImg
@@ -56,7 +56,7 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
           </Covid19LibraryCard>
           <CommunityHealthAcademyCard href="https://communityhealthacademy.course.tc/catalog/track/covid-19-digital-classroom-course-series">
             <CommunityHeading>
-              <span>COVID-19 Online Courses</span>
+              <span>COVID-19 Courses</span>
             </CommunityHeading>
             <SectionText>
               Open-source training delivered on the Community Health Academy's
