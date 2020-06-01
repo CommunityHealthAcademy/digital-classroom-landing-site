@@ -55,9 +55,9 @@ const Layout = ({ children, heroImg, theme, heroText, landingPage }) => {
             />
           </Covid19LibraryCard>
           <CommunityHealthAcademyCard href="https://communityhealthacademy.course.tc/catalog/track/covid-19-digital-classroom-course-series">
-            <CommunityHeading>
+            <SectionHeading>
               <span>COVID-19 Courses</span>
-            </CommunityHeading>
+            </SectionHeading>
             <SectionText>
               Open-source training delivered on the Community Health Academy's
               Platform.
@@ -113,12 +113,27 @@ const OurMissionCard = styled(Link)`
   ${above.desktop`
     margin-right: 14px;
     position: relative;
-    height: 230px;
+    height: 270px;
     padding: 40px 24px 28px 24px;
+  `}
+
+  ${above.desktopLarge`
+  height: 232px;
+  padding: 40px 24px 28px 24px;
   `}
 
   &:hover {
     filter: brightness(90%);
+  }
+
+  p {
+    ${above.desktop`
+      width: 168px;
+    `}
+
+    ${above.desktopLarge`
+      width: 232px;
+    `}
   }
 `
 
@@ -130,12 +145,27 @@ const OurMembersCard = styled(Link)`
   ${above.desktop`
     margin-right: 14px;
     position: relative;
-    height: 230px;
+    height: 270px;
+    padding: 40px 24px 28px 24px;
+  `}
+
+  ${above.desktopLarge`
+    height: 232px;
     padding: 40px 24px 28px 24px;
   `}
 
   &:hover {
     filter: brightness(90%);
+  }
+
+  p {
+    ${above.desktop`
+      width: 168px;
+    `}
+
+    ${above.desktopLarge`
+      width: 232px;
+    `}
   }
 `
 
@@ -147,12 +177,37 @@ const Covid19LibraryCard = styled.a`
   ${above.desktop`
     margin-right: 14px;
     position: relative;
-    height: 230px;
+    height: 270px;
+    padding: 40px 24px 28px 24px;
+  `}
+
+  ${above.desktopLarge`
+    height: 232px;
     padding: 40px 24px 28px 24px;
   `}
 
   &:hover {
     filter: brightness(90%);
+  }
+
+  h2 {
+    ${above.desktop`
+      margin-bottom: 20px;
+    `}
+
+    ${above.desktopLarge`
+      margin-bottom: 40px;
+    `}
+  }
+
+  p {
+    ${above.desktop`
+      width: 168px;
+    `}
+
+    ${above.desktopLarge`
+      width: 232px;
+    `}
   }
 `
 
@@ -164,12 +219,37 @@ const CommunityHealthAcademyCard = styled.a`
   ${above.desktop`
     margin-right: 14px;
     position: relative;
-    height: 230px;
+    height: 270px;
+    padding: 40px 24px 28px 24px;
+  `}
+
+  ${above.desktopLarge`
+    height: 232px;
     padding: 40px 24px 28px 24px;
   `}
 
   &:hover {
     filter: brightness(90%);
+  }
+
+  h2 {
+    ${above.desktop`
+      margin-bottom: 20px;
+    `}
+
+    ${above.desktopLarge`
+      margin-bottom: 40px;
+    `}
+  }
+
+  p {
+    ${above.desktop`
+      width: 168px;
+    `}
+
+    ${above.desktopLarge`
+      width: 232px;
+    `}
   }
 `
 
@@ -179,24 +259,6 @@ const SectionHeading = styled.h2`
   letter-spacing: 0.28px;
   color: ${color.white};
   margin: 0 0 40px 0;
-
-  ${above.desktop`
-    font-size: 24px;
-  `}
-
-  span {
-    &:hover {
-      border-bottom: 2px solid ${color.white};
-    }
-  }
-`
-
-const CommunityHeading = styled.h2`
-  ${gilroyBold};
-  font-size: 18px;
-  letter-spacing: 0.28px;
-  color: ${color.white};
-  margin: 0 0 12px 0;
 
   ${above.desktop`
     font-size: 24px;
