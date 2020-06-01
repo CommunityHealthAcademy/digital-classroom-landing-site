@@ -117,7 +117,7 @@ const OurMembersPage = ({ path }) => {
         <SectionHeading>Who</SectionHeading>
         <HeadingDivider></HeadingDivider>
         <ContentContainer>
-          <a href="https://lastmilehealth.org">
+          <a href="https://communityhealthacademy.course.tc/">
             <MemberLogoOne fluid={data.memberLogo1.childImageSharp.fluid} />
           </a>
           <SectionText>
