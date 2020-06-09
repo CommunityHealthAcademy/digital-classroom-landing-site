@@ -63,6 +63,11 @@ const Footer = () => {
                 COVID-19 Library Disclaimer
               </GatsbyLink>
             </li>
+            <li>
+              <ExternalLink href="https://covid-19digitalclassroom.us18.list-manage.com/subscribe/post?u=b5cec1bf4c0d31fb186dfed8e&id=346051388d">
+                Subscribe
+              </ExternalLink>
+            </li>
           </FooterList>
         </FooterSection>
       </FooterSectionContainer>
@@ -132,6 +137,14 @@ const FooterLink = styled.a`
 `
 
 const GatsbyLink = styled(Link)`
+  text-decoration: none;
+  ${gilroyMedium};
+  font-size: 14px;
+  line-height: 28px;
+  color: ${color.darkBlue};
+`
+
+const ExternalLink = styled.a`
   text-decoration: none;
   ${gilroyMedium};
   font-size: 14px;
