@@ -10,9 +10,22 @@ const Footer = () => {
       <FooterSectionContainer>
         <FooterSection aria-label="contact us">
           <FooterHeading>Contact Us</FooterHeading>
-          <FooterLink href="mailto:info@covid-19digitalclassroom.org">
-            info@covid-19digitalclassroom.org
-          </FooterLink>
+          <FooterList>
+            <li>
+              <FooterLink href="mailto:info@covid-19digitalclassroom.org">
+                info@covid-19digitalclassroom.org
+              </FooterLink>
+            </li>
+            <li>
+              <ExternalLink
+                href="https://covid-19digitalclassroom.us18.list-manage.com/subscribe/post?u=b5cec1bf4c0d31fb186dfed8e&id=346051388d"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Subscribe
+              </ExternalLink>
+            </li>
+          </FooterList>
         </FooterSection>
         <FooterSection aria-label="social links">
           <FooterHeading>Follow Us</FooterHeading>
@@ -62,15 +75,6 @@ const Footer = () => {
               <GatsbyLink to="/disclaimer">
                 COVID-19 Library Disclaimer
               </GatsbyLink>
-            </li>
-            <li>
-              <ExternalLink
-                href="https://covid-19digitalclassroom.us18.list-manage.com/subscribe/post?u=b5cec1bf4c0d31fb186dfed8e&id=346051388d"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Subscribe
-              </ExternalLink>
             </li>
           </FooterList>
         </FooterSection>
