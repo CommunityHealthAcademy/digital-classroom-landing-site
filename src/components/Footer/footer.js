@@ -18,7 +18,7 @@ const Footer = () => {
             </li>
             <li>
               <ExternalLink
-                href="https://covid-19digitalclassroom.us18.list-manage.com/subscribe/post?u=b5cec1bf4c0d31fb186dfed8e&id=346051388d"
+                href="https://lp.constantcontactpages.com/su/7lcjr0q/digitalclassroom"
                 rel="noreferrer"
                 target="_blank"
               >
